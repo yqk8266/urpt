@@ -1,0 +1,30 @@
+  {
+  "name": "urpt-ui",
+  "version": "1.0.0",
+  "description": "A Component Library for Vue.js",
+  "main": "lib/urpt-ui.common.js",
+  "files": [
+    "lib",
+    "src",
+    "packages",
+    "types"
+  ],
+  "scripts": {
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yqk8266/urpt.git"
+  },
+  "keywords": [
+    "vue",
+    "urpt",
+    "components"
+  ],
+  "author": "bruce.yu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yqk8266/urpt/issues"
+  },
+  "homepage": "https://github.com/yqk8266/urpt#readme"
+}
