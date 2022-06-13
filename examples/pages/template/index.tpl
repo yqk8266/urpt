@@ -290,66 +290,6 @@
         <p><%= 2 ></p>
       </div>
     </div>
-    <div class="jumbotron" ref="indexMainImg">
-      <img src="~examples/assets/images/theme-index-blue.png" alt="">
-      <div class="jumbotron-red" :style="{
-           height: mainImgOffset + 'px'
-         }">
-        <img src="~examples/assets/images/theme-index-red.png" alt="">
-      </div>
-    </div>
-    <div class="cards">
-      <ul class="container">
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/guide.png" alt="">
-            <h3><%= 3 ></h3>
-            <p><%= 4 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/guide/design"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/component.png" alt="">
-            <h3><%= 6 ></h3>
-            <p><%= 7 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/component/layout"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/theme-index-icon.svg" alt="">
-            <h3><%= 10 ></h3>
-            <p><%= 11 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/theme"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/resource.png" alt="">
-            <h3><%= 8 ></h3>
-            <p><%= 9 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/resource"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 <script>

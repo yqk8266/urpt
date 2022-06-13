@@ -2,6 +2,12 @@
   {
     "lang": "zh-CN",
     "pages": {
+      "index": {
+        "1": "UI组件库",
+        "2": "Urpt，一套为开发者准备的基于 Vue 2.0 的桌面端组件库",
+        "titleSize": "34",
+        "paraSize": "18"
+      },
       "component": {}
     }
   }
