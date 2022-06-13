@@ -56,7 +56,7 @@
         // shift popper from its origin by the given amount of pixels (can be negative)
         offset: 0,
 
-        // the element which will act as boundary of the popper
+        // the urpt which will act as boundary of the popper
         boundariesElement: 'viewport',
 
         // amount of pixel used to define a minimum distance between the boundaries and the popper
@@ -84,18 +84,18 @@
     /**
      * Create a new Popper.js instance
      * @constructor Popper
-     * @param {HTMLElement} reference - The reference element used to position the popper
+     * @param {HTMLElement} reference - The reference urpt used to position the popper
      * @param {HTMLElement|Object} popper
-     *      The HTML element used as popper, or a configuration used to generate the popper.
+     *      The HTML urpt used as popper, or a configuration used to generate the popper.
      * @param {String} [popper.tagName='div'] The tag name of the generated popper.
      * @param {Array} [popper.classNames=['popper']] Array of classes to apply to the generated popper.
      * @param {Array} [popper.attributes] Array of attributes to apply, specify `attr:value` to assign a value to it.
-     * @param {HTMLElement|String} [popper.parent=window.document.body] The parent element, given as HTMLElement or as query string.
+     * @param {HTMLElement|String} [popper.parent=window.document.body] The parent urpt, given as HTMLElement or as query string.
      * @param {String} [popper.content=''] The content of the popper, it can be text, html, or node; if it is not text, set `contentType` to `html` or `node`.
      * @param {String} [popper.contentType='text'] If `html`, the `content` will be parsed as HTML. If `node`, it will be appended as-is.
-     * @param {String} [popper.arrowTagName='div'] Same as `popper.tagName` but for the arrow element.
-     * @param {Array} [popper.arrowClassNames='popper__arrow'] Same as `popper.classNames` but for the arrow element.
-     * @param {String} [popper.arrowAttributes=['x-arrow']] Same as `popper.attributes` but for the arrow element.
+     * @param {String} [popper.arrowTagName='div'] Same as `popper.tagName` but for the arrow urpt.
+     * @param {Array} [popper.arrowClassNames='popper__arrow'] Same as `popper.classNames` but for the arrow urpt.
+     * @param {String} [popper.arrowAttributes=['x-arrow']] Same as `popper.attributes` but for the arrow urpt.
      * @param {Object} options
      * @param {String} [options.placement=bottom]
      *      Placement of the popper accepted values: `top(-start, -end), right(-start, -end), bottom(-start, -right),
@@ -103,8 +103,8 @@
      *
      * @param {HTMLElement|String} [options.arrowElement='[x-arrow]']
      *      The DOM Node used as arrow for the popper, or a CSS selector used to get the DOM node. It must be child of
-     *      its parent Popper. Popper.js will apply to the given element the style required to align the arrow with its
-     *      reference element.
+     *      its parent Popper. Popper.js will apply to the given urpt the style required to align the arrow with its
+     *      reference urpt.
      *      By default, it will look for a child node of the popper with the `x-arrow` attribute.
      *
      * @param {Boolean} [options.gpuAcceleration=true]
@@ -115,8 +115,8 @@
      * @param {Number} [options.offset=0]
      *      Amount of pixels the popper will be shifted (can be negative).
      *
-     * @param {String|Element} [options.boundariesElement='viewport']
-     *      The element which will define the boundaries of the popper position, the popper will never be placed outside
+     * @param {String|Urpt} [options.boundariesElement='viewport']
+     *      The urpt which will define the boundaries of the popper position, the popper will never be placed outside
      *      of the defined boundaries (except if `keepTogether` is enabled)
      *
      * @param {Number} [options.boundariesPadding=5]
@@ -128,11 +128,11 @@
      *
      * @param {String|Array} [options.flipBehavior='flip']
      *      The behavior used by the `flip` modifier to change the placement of the popper when the latter is trying to
-     *      overlap its reference element. Defining `flip` as value, the placement will be flipped on
+     *      overlap its reference urpt. Defining `flip` as value, the placement will be flipped on
      *      its axis (`right - left`, `top - bottom`).
      *      You can even pass an array of placements (eg: `['right', 'left', 'top']` ) to manually specify
      *      how alter the placement when a flip is needed. (eg. in the above example, it would first flip from right to left,
-     *      then, if even in its new placement, the popper is overlapping its reference element, it will be moved to top)
+     *      then, if even in its new placement, the popper is overlapping its reference urpt, it will be moved to top)
      *
      * @param {Array} [options.modifiers=[ 'shift', 'offset', 'preventOverflow', 'keepTogether', 'arrow', 'flip', 'applyStyle']]
      *      List of functions used to modify the data before they are applied to the popper, add your custom functions
@@ -310,22 +310,22 @@
 
         var parent = config.parent.jquery ? config.parent[0] : config.parent;
 
-        // if the given parent is a string, use it to match an element
-        // if more than one element is matched, the first one will be used as parent
+        // if the given parent is a string, use it to match an urpt
+        // if more than one urpt is matched, the first one will be used as parent
         // if no elements are matched, the script will throw an error
         if (typeof parent === 'string') {
             parent = d.querySelectorAll(config.parent);
             if (parent.length > 1) {
-                console.warn('WARNING: the given `parent` query(' + config.parent + ') matched more than one element, the first one will be used');
+                console.warn('WARNING: the given `parent` query(' + config.parent + ') matched more than one urpt, the first one will be used');
             }
             if (parent.length === 0) {
                 throw 'ERROR: the given `parent` doesn\'t exists!';
             }
             parent = parent[0];
         }
-        // if the given parent is a DOM nodes list or an array of nodes with more than one element,
+        // if the given parent is a DOM nodes list or an array of nodes with more than one urpt,
         // the first one will be used as parent
-        if (parent.length > 1 && parent instanceof Element === false) {
+        if (parent.length > 1 && parent instanceof Urpt === false) {
             console.warn('WARNING: you have passed as parent a list of elements, the first one will be used');
             parent = parent[0];
         }
@@ -336,30 +336,30 @@
         return popper;
 
         /**
-         * Adds class names to the given element
+         * Adds class names to the given urpt
          * @function
          * @ignore
          * @param {HTMLElement} target
          * @param {Array} classes
          */
-        function addClassNames(element, classNames) {
+        function addClassNames(urpt, classNames) {
             classNames.forEach(function(className) {
-                element.classList.add(className);
+                urpt.classList.add(className);
             });
         }
 
         /**
-         * Adds attributes to the given element
+         * Adds attributes to the given urpt
          * @function
          * @ignore
          * @param {HTMLElement} target
          * @param {Array} attributes
          * @example
-         * addAttributes(element, [ 'data-info:foobar' ]);
+         * addAttributes(urpt, [ 'data-info:foobar' ]);
          */
-        function addAttributes(element, attributes) {
+        function addAttributes(urpt, attributes) {
             attributes.forEach(function(attribute) {
-                element.setAttribute(attribute.split(':')[0], attribute.split(':')[1] || '');
+                urpt.setAttribute(attribute.split(':')[0], attribute.split(':')[1] || '');
             });
         }
 
@@ -369,8 +369,8 @@
      * Helper used to get the position which will be applied to the popper
      * @method
      * @memberof Popper
-     * @param config {HTMLElement} popper element
-     * @param reference {HTMLElement} reference element
+     * @param config {HTMLElement} popper urpt
+     * @param reference {HTMLElement} reference urpt
      * @returns {String} position
      */
     Popper.prototype._getPosition = function(popper, reference) {
@@ -381,7 +381,7 @@
         }
 
         // Decide if the popper will be fixed
-        // If the reference element is inside a fixed context, the popper will be fixed as well to allow them to scroll together
+        // If the reference urpt is inside a fixed context, the popper will be fixed as well to allow them to scroll together
         var isParentFixed = isFixed(reference, container);
         return isParentFixed ? 'fixed' : 'absolute';
     };
@@ -391,8 +391,8 @@
      * @method
      * @memberof Popper
      * @access private
-     * @param {Element} popper - the popper element
-     * @param {Element} reference - the reference element (the popper will be relative to this)
+     * @param {Urpt} popper - the popper urpt
+     * @param {Urpt} reference - the reference urpt (the popper will be relative to this)
      * @returns {Object} An object containing the offsets which will be applied to the popper
      */
     Popper.prototype._getOffsets = function(popper, reference, placement) {
@@ -403,7 +403,7 @@
         var isParentFixed = popperOffsets.position === 'fixed';
 
         //
-        // Get reference element position
+        // Get reference urpt position
         //
         var referenceOffsets = getOffsetRectRelativeToCustomParent(reference, getOffsetParent(popper), isParentFixed);
 
@@ -489,7 +489,7 @@
      * @access private
      * @param {Object} data - Object containing the property "offsets" generated by `_getOffsets`
      * @param {Number} padding - Boundaries padding
-     * @param {Element} boundariesElement - Element used to define the boundaries
+     * @param {Urpt} boundariesElement - Urpt used to define the boundaries
      * @returns {Object} Coordinates of the boundaries
      */
     Popper.prototype._getBoundaries = function(data, padding, boundariesElement) {
@@ -515,11 +515,11 @@
             var offsetParentRect = getOffsetRect(offsetParent);
 
             // Thanks the fucking native API, `document.body.scrollTop` & `document.documentElement.scrollTop`
-            var getScrollTopValue = function (element) {
-                return element == document.body ? Math.max(document.documentElement.scrollTop, document.body.scrollTop) : element.scrollTop;
+            var getScrollTopValue = function (urpt) {
+                return urpt == document.body ? Math.max(document.documentElement.scrollTop, document.body.scrollTop) : urpt.scrollTop;
             }
-            var getScrollLeftValue = function (element) {
-                return element == document.body ? Math.max(document.documentElement.scrollLeft, document.body.scrollLeft) : element.scrollLeft;
+            var getScrollLeftValue = function (urpt) {
+                return urpt == document.body ? Math.max(document.documentElement.scrollLeft, document.body.scrollLeft) : urpt.scrollLeft;
             }
 
             // if the popper is fixed we don't have to substract scrolling from the boundaries
@@ -604,7 +604,7 @@
     Popper.prototype.modifiers = {};
 
     /**
-     * Apply the computed styles to the popper element
+     * Apply the computed styles to the popper urpt
      * @method
      * @memberof Popper.modifiers
      * @argument {Object} data - The data object generated by `update` method
@@ -656,7 +656,7 @@
     };
 
     /**
-     * Modifier used to shift the popper on the start or end of its reference element side
+     * Modifier used to shift the popper on the start or end of its reference urpt side
      * @method
      * @memberof Popper.modifiers
      * @argument {Object} data - The data object generated by `update` method
@@ -770,7 +770,7 @@
     };
 
     /**
-     * Modifier used to flip the placement of the popper when the latter is starting overlapping its reference element.
+     * Modifier used to flip the placement of the popper when the latter is starting overlapping its reference urpt.
      * Requires the `preventOverflow` modifier before it in order to work.
      * **NOTE:** This modifier will run all its previous modifiers everytime it tries to flip the popper!
      * @method
@@ -840,7 +840,7 @@
 
     /**
      * Modifier used to add an offset to the popper, useful if you more granularity positioning your popper.
-     * The offsets will shift the popper on the side of its reference element.
+     * The offsets will shift the popper on the side of its reference urpt.
      * @method
      * @memberof Popper.modifiers
      * @argument {Object} data - The data object generated by _update method
@@ -866,8 +866,8 @@
     };
 
     /**
-     * Modifier used to move the arrows on the edge of the popper to make sure them are always between the popper and the reference element
-     * It will use the CSS outer size of the arrow element to know how many pixels of conjuction are needed
+     * Modifier used to move the arrows on the edge of the popper to make sure them are always between the popper and the reference urpt
+     * It will use the CSS outer size of the arrow urpt to know how many pixels of conjuction are needed
      * @method
      * @memberof Popper.modifiers
      * @argument {Object} data - The data object generated by _update method
@@ -882,14 +882,14 @@
             arrow = this._popper.querySelector(arrow);
         }
 
-        // if arrow element is not found, don't run the modifier
+        // if arrow urpt is not found, don't run the modifier
         if (!arrow) {
             return data;
         }
 
-        // the arrow element must be child of its popper
+        // the arrow urpt must be child of its popper
         if (!this._popper.contains(arrow)) {
-            console.warn('WARNING: `arrowElement` must be child of its popper element!');
+            console.warn('WARNING: `arrowElement` must be child of its popper urpt!');
             return data;
         }
 
@@ -947,26 +947,26 @@
     //
 
     /**
-     * Get the outer sizes of the given element (offset size + margins)
+     * Get the outer sizes of the given urpt (offset size + margins)
      * @function
      * @ignore
-     * @argument {Element} element
+     * @argument {Urpt} urpt
      * @returns {Object} object containing width and height properties
      */
-    function getOuterSizes(element) {
+    function getOuterSizes(urpt) {
         // NOTE: 1 DOM access here
-        var _display = element.style.display, _visibility = element.style.visibility;
-        element.style.display = 'block'; element.style.visibility = 'hidden';
-        var calcWidthToForceRepaint = element.offsetWidth;
+        var _display = urpt.style.display, _visibility = urpt.style.visibility;
+        urpt.style.display = 'block'; urpt.style.visibility = 'hidden';
+        var calcWidthToForceRepaint = urpt.offsetWidth;
 
         // original method
-        var styles = root.getComputedStyle(element);
+        var styles = root.getComputedStyle(urpt);
         var x = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
         var y = parseFloat(styles.marginLeft) + parseFloat(styles.marginRight);
-        var result = { width: element.offsetWidth + y, height: element.offsetHeight + x };
+        var result = { width: urpt.offsetWidth + y, height: urpt.offsetHeight + x };
 
-        // reset element styles
-        element.style.display = _display; element.style.visibility = _visibility;
+        // reset urpt styles
+        urpt.style.display = _display; urpt.style.visibility = _visibility;
         return result;
     }
 
@@ -1018,48 +1018,48 @@
     }
 
     /**
-     * Get CSS computed property of the given element
+     * Get CSS computed property of the given urpt
      * @function
      * @ignore
-     * @argument {Eement} element
+     * @argument {Eement} urpt
      * @argument {String} property
      */
-    function getStyleComputedProperty(element, property) {
+    function getStyleComputedProperty(urpt, property) {
         // NOTE: 1 DOM access here
-        var css = root.getComputedStyle(element, null);
+        var css = root.getComputedStyle(urpt, null);
         return css[property];
     }
 
     /**
-     * Returns the offset parent of the given element
+     * Returns the offset parent of the given urpt
      * @function
      * @ignore
-     * @argument {Element} element
-     * @returns {Element} offset parent
+     * @argument {Urpt} urpt
+     * @returns {Urpt} offset parent
      */
-    function getOffsetParent(element) {
+    function getOffsetParent(urpt) {
         // NOTE: 1 DOM access here
-        var offsetParent = element.offsetParent;
+        var offsetParent = urpt.offsetParent;
         return offsetParent === root.document.body || !offsetParent ? root.document.documentElement : offsetParent;
     }
 
     /**
-     * Returns the scrolling parent of the given element
+     * Returns the scrolling parent of the given urpt
      * @function
      * @ignore
-     * @argument {Element} element
-     * @returns {Element} offset parent
+     * @argument {Urpt} urpt
+     * @returns {Urpt} offset parent
      */
-    function getScrollParent(element) {
-        var parent = element.parentNode;
+    function getScrollParent(urpt) {
+        var parent = urpt.parentNode;
 
         if (!parent) {
-            return element;
+            return urpt;
         }
 
         if (parent === root.document) {
             // Firefox puts the scrollTOp value on `documentElement` instead of `body`, we then check which of them is
-            // greater than 0 and return the proper element
+            // greater than 0 and return the proper urpt
             if (root.document.body.scrollTop || root.document.body.scrollLeft) {
                 return root.document.body;
             } else {
@@ -1078,35 +1078,35 @@
             // fixes issue #65
             return parent;
         }
-        return getScrollParent(element.parentNode);
+        return getScrollParent(urpt.parentNode);
     }
 
     /**
-     * Check if the given element is fixed or is inside a fixed parent
+     * Check if the given urpt is fixed or is inside a fixed parent
      * @function
      * @ignore
-     * @argument {Element} element
-     * @argument {Element} customContainer
+     * @argument {Urpt} urpt
+     * @argument {Urpt} customContainer
      * @returns {Boolean} answer to "isFixed?"
      */
-    function isFixed(element) {
-        if (element === root.document.body) {
+    function isFixed(urpt) {
+        if (urpt === root.document.body) {
             return false;
         }
-        if (getStyleComputedProperty(element, 'position') === 'fixed') {
+        if (getStyleComputedProperty(urpt, 'position') === 'fixed') {
             return true;
         }
-        return element.parentNode ? isFixed(element.parentNode) : element;
+        return urpt.parentNode ? isFixed(urpt.parentNode) : urpt;
     }
 
     /**
      * Set the style to the given popper
      * @function
      * @ignore
-     * @argument {Element} element - Element to apply the style to
-     * @argument {Object} styles - Object with a list of properties and values which will be applied to the element
+     * @argument {Urpt} urpt - Urpt to apply the style to
+     * @argument {Object} styles - Object with a list of properties and values which will be applied to the urpt
      */
-    function setStyle(element, styles) {
+    function setStyle(urpt, styles) {
         function is_numeric(n) {
             return (n !== '' && !isNaN(parseFloat(n)) && isFinite(n));
         }
@@ -1116,7 +1116,7 @@
             if (['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 && is_numeric(styles[prop])) {
                 unit = 'px';
             }
-            element.style[prop] = styles[prop] + unit;
+            urpt.style[prop] = styles[prop] + unit;
         });
     }
 
@@ -1133,18 +1133,18 @@
     }
 
     /**
-     * Get the position of the given element, relative to its offset parent
+     * Get the position of the given urpt, relative to its offset parent
      * @function
      * @ignore
-     * @param {Element} element
-     * @return {Object} position - Coordinates of the element and its `scrollTop`
+     * @param {Urpt} urpt
+     * @return {Object} position - Coordinates of the urpt and its `scrollTop`
      */
-    function getOffsetRect(element) {
+    function getOffsetRect(urpt) {
         var elementRect = {
-            width: element.offsetWidth,
-            height: element.offsetHeight,
-            left: element.offsetLeft,
-            top: element.offsetTop
+            width: urpt.offsetWidth,
+            height: urpt.offsetHeight,
+            left: urpt.offsetLeft,
+            top: urpt.offsetTop
         };
 
         elementRect.right = elementRect.left + elementRect.width;
@@ -1155,21 +1155,21 @@
     }
 
     /**
-     * Get bounding client rect of given element
+     * Get bounding client rect of given urpt
      * @function
      * @ignore
-     * @param {HTMLElement} element
+     * @param {HTMLElement} urpt
      * @return {Object} client rect
      */
-    function getBoundingClientRect(element) {
-        var rect = element.getBoundingClientRect();
+    function getBoundingClientRect(urpt) {
+        var rect = urpt.getBoundingClientRect();
 
         // whether the IE version is lower than 11
         var isIE = navigator.userAgent.indexOf("MSIE") != -1;
 
         // fix ie document bounding top always 0 bug
-        var rectTop = isIE && element.tagName === 'HTML'
-            ? -element.scrollTop
+        var rectTop = isIE && urpt.tagName === 'HTML'
+            ? -urpt.scrollTop
             : rect.top;
 
         return {
@@ -1183,15 +1183,15 @@
     }
 
     /**
-     * Given an element and one of its parents, return the offset
+     * Given an urpt and one of its parents, return the offset
      * @function
      * @ignore
-     * @param {HTMLElement} element
+     * @param {HTMLElement} urpt
      * @param {HTMLElement} parent
      * @return {Object} rect
      */
-    function getOffsetRectRelativeToCustomParent(element, parent, fixed) {
-        var elementRect = getBoundingClientRect(element);
+    function getOffsetRectRelativeToCustomParent(urpt, parent, fixed) {
+        var elementRect = getBoundingClientRect(urpt);
         var parentRect = getBoundingClientRect(parent);
 
         if (fixed) {

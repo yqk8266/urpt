@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import App from './editor/index';
-import Element from 'main/index.js';
+import Urpt from 'main/index.js';
 import 'packages/theme-chalk/src/index.scss';
 
 export default () => {
-  Vue.use(Element, { zIndex: 100000 });
+  Vue.use(Urpt, { zIndex: 100000 });
   const root = document.createElement('div');
   document.body.appendChild(root);
 

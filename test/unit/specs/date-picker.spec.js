@@ -496,7 +496,7 @@ describe('DatePicker', () => {
             ref="compo"
             v-model="value"
             type="date"
-            value-format="dd/MM yyyy [Element]" />`,
+            value-format="dd/MM yyyy [Urpt]" />`,
         data() {
           return {
             value: ''
@@ -513,7 +513,7 @@ describe('DatePicker', () => {
           const yyyy = today.getFullYear();
           const MM = ('0' + (today.getMonth() + 1)).slice(-2);
           const dd = '01'; // first available one should be first day of month
-          const expectValue = `${dd}/${MM} ${yyyy} Element`;
+          const expectValue = `${dd}/${MM} ${yyyy} Urpt`;
           expect(vm.value).to.equal(expectValue);
           done();
         }, DELAY);
@@ -587,7 +587,7 @@ describe('DatePicker', () => {
             ref="compo"
             v-model="value"
             type="date"
-            format="[Element] yyyy-MM-dd"
+            format="[Urpt] yyyy-MM-dd"
             value-format="dd/MM yyyy [UI]" />`,
         data() {
           return {
@@ -598,7 +598,7 @@ describe('DatePicker', () => {
       const input = vm.$refs.compo.$el.querySelector('input');
       input.focus();
       setTimeout(_ => {
-        input.value = 'Element 2000-10-01';
+        input.value = 'Urpt 2000-10-01';
         triggerEvent(input, 'input');
         keyDown(input, ENTER);
         setTimeout(_ => {

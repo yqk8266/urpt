@@ -38,7 +38,7 @@ export declare class ElDrawer extends ElementUIComponent {
     /* Equivalent to `Dialog`'s modal attribute, determines whether the dark shadowing background should show */
     modal: boolean
 
-    /* Equivalent to `Dialog`'s modal-append-to-body attribute, determines whether the shadowing background should be inserted direct to DocumentBody element */
+    /* Equivalent to `Dialog`'s modal-append-to-body attribute, determines whether the shadowing background should be inserted direct to DocumentBody urpt */
     modalAppendToBody: boolean
 
     /* Attributes that controls the drawer's direction of display*/

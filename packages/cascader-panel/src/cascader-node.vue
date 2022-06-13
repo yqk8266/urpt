@@ -1,7 +1,7 @@
 <script>
-  import ElCheckbox from 'element-ui/packages/checkbox';
-  import ElRadio from 'element-ui/packages/radio';
-  import { isEqual } from 'element-ui/src/utils/util';
+  import ElCheckbox from 'urpt-ui/packages/checkbox';
+  import ElRadio from 'urpt-ui/packages/radio';
+  import { isEqual } from 'urpt-ui/src/utils/util';
 
   const stopPropagation = e => e.stopPropagation();
 
@@ -154,7 +154,7 @@
             disabled={ isDisabled }
             onChange={ this.handleCheckChange }
             nativeOnClick={ stopPropagation }>
-            {/* add an empty element to avoid render label */}
+            {/* add an empty urpt to avoid render label */}
             <span></span>
           </el-radio>
         );

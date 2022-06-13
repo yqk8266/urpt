@@ -23,14 +23,14 @@ describe('Link', () => {
   });
   it('href', () => {
     vm = createTest(Link, {
-      href: 'https://element.eleme.io/'
+      href: 'https://urpt.eleme.io/'
     }, true);
     let linkElm = vm.$el;
-    expect(linkElm.getAttribute('href')).to.be.equal('https://element.eleme.io/');
+    expect(linkElm.getAttribute('href')).to.be.equal('https://urpt.eleme.io/');
   });
   it('target', () => {
     vm = createVue(`
-    <el-link href="https://element.eleme.io" target="_blank">
+    <el-link href="https://urpt.eleme.io" target="_blank">
       default
     </el-link>
     `);

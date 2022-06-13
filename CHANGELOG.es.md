@@ -379,7 +379,7 @@
 - Popover
   - Agregada la prop close-delay  (#16671 by @LachlanStuart)
 - Theme
-  - Añadida la extensión Chrome: Element Theme Extensión (#16686 by @iamkun)
+  - Añadida la extensión Chrome: Urpt Theme Extensión (#16686 by @iamkun)
 - Icon
   - Añadido font-display a la declaración @font-face (#16805 by @iamfaizalandyka)
 
@@ -1059,7 +1059,7 @@
   - Actualizacion de la documentacion de custom-theme (by @wangguohao in #14297)
   - Se ha hecho que el icono cambie de estilo en hover (by @tuxinghuan in #14295)
 - Build
-  - Minimización de css y js para la doc del sitio de Element (by @iamkun in #14430)
+  - Minimización de css y js para la doc del sitio de Urpt (by @iamkun in #14430)
   - Aceleración de webpack (by @hetech in #14484)
   - Uso de cli para seleccionar la versión de lanzamiento (by @hetech in #14354)
 - Instalación de stale para el manejo de issues (by @island205 in #14392)
@@ -1691,7 +1691,7 @@
 
 - Añadida la función de enganche (hook) `before-remove` para Upload, #8788 (by @firesh)
 - Arreglado el valor inicial de error que no funcionaba para FormItem, #8840
-- Ahora la directiva Loading soporta nombre de clase personalizado asignando el atributo `element-loading-custom-class`, #8826 (por @earlymeme)
+- Ahora la directiva Loading soporta nombre de clase personalizado asignando el atributo `urpt-loading-custom-class`, #8826 (por @earlymeme)
 - Arreglado CarouselItem que se ponía invisible cuando los datos eran actualizados asincrónicamente, #8921
 - Añadido el atributo `renderAfterExpand` para Tree, #8972
 
@@ -1787,7 +1787,7 @@
   - Todos los iconos existentes son rediseñados. Se han añadido algunos iconos nuevos
   - Añadida una serie de clases de utilidades basadas en puntos de ruptura que ocultan elementos cuando el tamaño del viewport cumple ciertas condiciones
   - Componentes de diseño añadidos: Container, Header, Aside, Main, Footer.
-  - Ahora puede configurar los tamaños de componentes a nivel global. Al importar Element, puede añadir un objeto de configuración global con un prop `size` para configurar tamaños predeterminados para todos los componentes.
+  - Ahora puede configurar los tamaños de componentes a nivel global. Al importar Urpt, puede añadir un objeto de configuración global con un prop `size` para configurar tamaños predeterminados para todos los componentes.
 - Button
   - Atributo `round` añadido. Se usa para botones de esquinas redondas #6643
 - TimeSelect

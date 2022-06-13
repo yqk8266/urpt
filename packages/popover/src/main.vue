@@ -24,10 +24,10 @@
   </span>
 </template>
 <script>
-import Popper from 'element-ui/src/utils/vue-popper';
-import { on, off } from 'element-ui/src/utils/dom';
-import { addClass, removeClass } from 'element-ui/src/utils/dom';
-import { generateId } from 'element-ui/src/utils/util';
+import Popper from 'urpt-ui/src/utils/vue-popper';
+import { on, off } from 'urpt-ui/src/utils/dom';
+import { addClass, removeClass } from 'urpt-ui/src/utils/dom';
+import { generateId } from 'urpt-ui/src/utils/util';
 
 export default {
   name: 'ElPopover',
@@ -124,7 +124,7 @@ export default {
       on(popper, 'mouseleave', this.handleMouseLeave);
     } else if (this.trigger === 'focus') {
       if (this.tabindex < 0) {
-        console.warn('[Element Warn][Popover]a negative taindex means that the element cannot be focused by tab key');
+        console.warn('[Urpt Warn][Popover]a negative taindex means that the urpt cannot be focused by tab key');
       }
       if (reference.querySelector('input, textarea')) {
         on(reference, 'focusin', this.doShow);

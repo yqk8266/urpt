@@ -3,20 +3,20 @@
     <div class="container">
       <!-- <div class="footer-main">
         <h4>{{ langConfig.links }}</h4>
-        <a href="https://github.com/ElemeFE/element" class="footer-main-link" target="_blank">{{ langConfig.repo }}</a>
-        <a href="https://github.com/ElemeFE/element/blob/dev/FAQ.md" class="footer-main-link" target="_blank">{{ langConfig.faq }}</a>
-        <a href="https://github.com/ElementUI/element-starter" class="footer-main-link" target="_blank">{{ langConfig.starter }}</a>
+        <a href="https://github.com/ElemeFE/urpt" class="footer-main-link" target="_blank">{{ langConfig.repo }}</a>
+        <a href="https://github.com/ElemeFE/urpt/blob/dev/FAQ.md" class="footer-main-link" target="_blank">{{ langConfig.faq }}</a>
+        <a href="https://github.com/ElementUI/urpt-starter" class="footer-main-link" target="_blank">{{ langConfig.starter }}</a>
         <a :href="'/#/' + lang + '/component/custom-theme'" class="footer-main-link" target="_blank">{{ langConfig.theme }}</a>
-        <a href="https://github.com/elemefe/element-react" class="footer-main-link" target="_blank">Element-React</a>
-        <a href="https://github.com/ElemeFE/element-angular" class="footer-main-link" target="_blank">Element-Angular</a>
+        <a href="https://github.com/elemefe/urpt-react" class="footer-main-link" target="_blank">Urpt-React</a>
+        <a href="https://github.com/ElemeFE/urpt-angular" class="footer-main-link" target="_blank">Urpt-Angular</a>
       </div> -->
       <!-- <div class="footer-main">
         <h4>{{ langConfig.community }}</h4>
         <a :href="gitterLink" class="footer-main-link" target="_blank">{{ langConfig.gitter }}</a>
-        <a href="https://github.com/ElemeFE/element/issues" class="footer-main-link" target="_blank">{{ langConfig.feedback }}</a>
-        <a :href="`https://github.com/ElemeFE/element/blob/master/.github/CONTRIBUTING.${ lang }.md`" class="footer-main-link" target="_blank">{{ langConfig.contribution }}</a>
-        <a href="https://segmentfault.com/t/element-ui" class="footer-main-link" target="_blank">SegmentFault</a>
-        <a href="https://github.com/ElementUI/awesome-element" class="footer-main-link" target="_blank">Awesome Element</a>
+        <a href="https://github.com/ElemeFE/urpt/issues" class="footer-main-link" target="_blank">{{ langConfig.feedback }}</a>
+        <a :href="`https://github.com/ElemeFE/urpt/blob/master/.github/CONTRIBUTING.${ lang }.md`" class="footer-main-link" target="_blank">{{ langConfig.contribution }}</a>
+        <a href="https://segmentfault.com/t/urpt-ui" class="footer-main-link" target="_blank">SegmentFault</a>
+        <a href="https://github.com/ElementUI/awesome-urpt" class="footer-main-link" target="_blank">Awesome Urpt</a>
       </div> -->
       <div class="footer-social">
         <p class="footer-social-title">Urpt {{ version && version.slice(0, 3) }}</p>
@@ -147,8 +147,8 @@
 
 <script type="text/babel">
   import compoLang from '../i18n/component.json';
-  import Element from 'main/index.js';
-  const { version } = Element;
+  import Urpt from 'main/index.js';
+  const { version } = Urpt;
 
   export default {
     data() {
@@ -167,7 +167,7 @@
       },
 
       gitterLink() {
-        return this.lang === 'zh-CN' ? 'https://gitter.im/ElemeFE/element' : 'https://gitter.im/element-en/Lobby';
+        return this.lang === 'zh-CN' ? 'https://gitter.im/ElemeFE/urpt' : 'https://gitter.im/urpt-en/Lobby';
       }
     }
   };

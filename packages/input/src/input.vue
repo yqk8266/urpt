@@ -108,11 +108,11 @@
   </div>
 </template>
 <script>
-  import emitter from 'element-ui/src/mixins/emitter';
-  import Migrating from 'element-ui/src/mixins/migrating';
+  import emitter from 'urpt-ui/src/mixins/emitter';
+  import Migrating from 'urpt-ui/src/mixins/migrating';
   import calcTextareaHeight from './calcTextareaHeight';
-  import merge from 'element-ui/src/utils/merge';
-  import {isKorean} from 'element-ui/src/utils/shared';
+  import merge from 'urpt-ui/src/utils/merge';
+  import {isKorean} from 'urpt-ui/src/utils/shared';
 
   export default {
     name: 'ElInput',
@@ -166,7 +166,7 @@
         type: String,
         validator(val) {
           process.env.NODE_ENV !== 'production' &&
-            console.warn('[Element Warn][Input]\'auto-complete\' property will be deprecated in next major version. please use \'autocomplete\' instead.');
+            console.warn('[Urpt Warn][Input]\'auto-complete\' property will be deprecated in next major version. please use \'autocomplete\' instead.');
           return true;
         }
       },
@@ -268,13 +268,13 @@
       },
       // native input value is set explicitly
       // do not use v-model / :value in template
-      // see: https://github.com/ElemeFE/element/issues/14521
+      // see: https://github.com/ElemeFE/urpt/issues/14521
       nativeInputValue() {
         this.setNativeInputValue();
       },
       // when change between <input> and <textarea>,
       // update DOM dependent value and styles
-      // https://github.com/ElemeFE/element/issues/14857
+      // https://github.com/ElemeFE/urpt/issues/14857
       type() {
         this.$nextTick(() => {
           this.setNativeInputValue();
@@ -356,17 +356,17 @@
       },
       handleInput(event) {
         // should not emit input during composition
-        // see: https://github.com/ElemeFE/element/issues/10516
+        // see: https://github.com/ElemeFE/urpt/issues/10516
         if (this.isComposing) return;
 
-        // hack for https://github.com/ElemeFE/element/issues/8548
+        // hack for https://github.com/ElemeFE/urpt/issues/8548
         // should remove the following line when we don't support IE
         if (event.target.value === this.nativeInputValue) return;
 
         this.$emit('input', event.target.value);
 
         // ensure native input value is controlled
-        // see: https://github.com/ElemeFE/element/issues/12850
+        // see: https://github.com/ElemeFE/urpt/issues/12850
         this.$nextTick(this.setNativeInputValue);
       },
       handleChange(event) {

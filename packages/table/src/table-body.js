@@ -1,8 +1,8 @@
-import { arrayFindIndex } from 'element-ui/src/utils/util';
+import { arrayFindIndex } from 'urpt-ui/src/utils/util';
 import { getCell, getColumnByCell, getRowIdentity } from './util';
-import { getStyle, hasClass, removeClass, addClass } from 'element-ui/src/utils/dom';
-import ElCheckbox from 'element-ui/packages/checkbox';
-import ElTooltip from 'element-ui/packages/tooltip';
+import { getStyle, hasClass, removeClass, addClass } from 'urpt-ui/src/utils/dom';
+import ElCheckbox from 'urpt-ui/packages/checkbox';
+import ElTooltip from 'urpt-ui/packages/tooltip';
 import debounce from 'throttle-debounce/debounce';
 import LayoutObserver from './layout-observer';
 import { mapStates } from './store/helper';
@@ -84,7 +84,7 @@ export default {
 
   watch: {
     // don't trigger getter of currentRow in getCellClass. see https://jsfiddle.net/oe2b4hqt/
-    // update DOM manually. see https://github.com/ElemeFE/element/pull/13954/files#diff-9b450c00d0a9dec0ffad5a3176972e40
+    // update DOM manually. see https://github.com/ElemeFE/urpt/pull/13954/files#diff-9b450c00d0a9dec0ffad5a3176972e40
     'store.states.hoverRow'(newVal, oldVal) {
       if (!this.store.states.isComplex || this.$isServer) return;
       let raf = window.requestAnimationFrame;
@@ -329,7 +329,7 @@ export default {
         display = treeRowData.display;
       }
       // 指令 v-show 会覆盖 row-style 中 display
-      // 使用 :style 代替 v-show https://github.com/ElemeFE/element/issues/16995
+      // 使用 :style 代替 v-show https://github.com/ElemeFE/urpt/issues/16995
       let displayStyle = display ? null : {
         display: 'none'
       };
@@ -374,7 +374,7 @@ export default {
         const renderExpanded = this.table.renderExpanded;
         const tr = this.rowRender(row, $index);
         if (!renderExpanded) {
-          console.error('[Element Error]renderExpanded is required.');
+          console.error('[Urpt Error]renderExpanded is required.');
           return tr;
         }
         // 使用二维数组，避免修改 $index

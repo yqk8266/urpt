@@ -8,7 +8,7 @@ export interface PopoverSlots {
   /** Content of popover */
   default: VNode[],
 
-  /** HTML element that triggers popover */
+  /** HTML urpt that triggers popover */
   reference: VNode[]
 
   [key: string]: VNode[]

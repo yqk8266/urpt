@@ -103,7 +103,7 @@ export default {
       noData: 'Maʼlumot yoʻq',
       titles: ['1-jadval', '2-jadval'],
       filterPlaceholder: 'Kalit soʻzni kiriting',
-      noCheckedFormat: '{total} ta element',
+      noCheckedFormat: '{total} ta urpt',
       hasCheckedFormat: '{checked}/{total} ta belgilandi'
     },
     image: {

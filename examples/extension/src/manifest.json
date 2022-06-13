@@ -1,7 +1,7 @@
 {
-  "name": "Element Theme Roller",
+  "name": "Urpt Theme Roller",
   "version": "0.0.9",
-  "description": "Customize all Design Tokens of Element UI and preview in real-time",
+  "description": "Customize all Design Tokens of Urpt UI and preview in real-time",
   "web_accessible_resources": ["entry.js"],
   "background": {
     "scripts": [
@@ -14,7 +14,7 @@
   },
   "browser_action": {
     "default_icon": "icon.png",
-    "default_title": "Element Theme Roller"
+    "default_title": "Urpt Theme Roller"
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "manifest_version": 2,

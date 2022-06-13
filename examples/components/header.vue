@@ -321,12 +321,12 @@
           </li>
 
           <!-- gap -->
-          <li class="nav-item" v-show="isComponentPage">
+          <!-- <li class="nav-item" v-show="isComponentPage">
             <div class="nav-gap"></div>
-          </li>
+          </li> -->
 
           <!-- 版本选择器 -->
-          <li class="nav-item nav-versions" v-show="isComponentPage">
+          <!-- <li class="nav-item nav-versions" v-show="isComponentPage">
             <el-dropdown
               trigger="click"
               class="nav-dropdown"
@@ -347,7 +347,7 @@
                 </el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
-          </li>
+          </li> -->
 
           <!-- 语言选择器 -->
           <!-- <li class="nav-item lang-item">
@@ -381,12 +381,12 @@
   import ThemePicker from './theme-picker.vue';
   import AlgoliaSearch from './search.vue';
   import compoLang from '../i18n/component.json';
-  import Element from 'main/index.js';
+  import Urpt from 'main/index.js';
   import themeLoader from './theme/loader';
   import bus from '../bus';
   import { ACTION_USER_CONFIG_UPDATE } from './theme/constant.js';
 
-  const { version } = Element;
+  const { version } = Urpt;
 
   export default {
     data() {

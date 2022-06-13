@@ -1,7 +1,7 @@
-import Popper from 'element-ui/src/utils/vue-popper';
+import Popper from 'urpt-ui/src/utils/vue-popper';
 import debounce from 'throttle-debounce/debounce';
-import { addClass, removeClass, on, off } from 'element-ui/src/utils/dom';
-import { generateId } from 'element-ui/src/utils/util';
+import { addClass, removeClass, on, off } from 'urpt-ui/src/utils/dom';
+import { generateId } from 'urpt-ui/src/utils/util';
 import Vue from 'vue';
 
 export default {
@@ -128,7 +128,7 @@ export default {
       on(this.referenceElm, 'blur', this.handleBlur);
       on(this.referenceElm, 'click', this.removeFocusing);
     }
-    // fix issue https://github.com/ElemeFE/element/issues/14424
+    // fix issue https://github.com/ElemeFE/urpt/issues/14424
     if (this.value && this.popperVM) {
       this.popperVM.$nextTick(() => {
         if (this.value) {
@@ -214,13 +214,13 @@ export default {
     getFirstElement() {
       const slots = this.$slots.default;
       if (!Array.isArray(slots)) return null;
-      let element = null;
+      let urpt = null;
       for (let index = 0; index < slots.length; index++) {
         if (slots[index] && slots[index].tag) {
-          element = slots[index];
+          urpt = slots[index];
         };
       }
-      return element;
+      return urpt;
     }
   },
 

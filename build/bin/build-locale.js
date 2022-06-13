@@ -29,7 +29,7 @@ fileList
         var code = result.code;
 
         code = code
-          .replace('define(\'', 'define(\'element/locale/')
+          .replace('define(\'', 'define(\'urpt/locale/')
           .replace('global.', 'global.ELEMENT.lang = global.ELEMENT.lang || {}; \n    global.ELEMENT.lang.');
         save(resolve(__dirname, '../../lib/umd/locale', file)).write(code);
 

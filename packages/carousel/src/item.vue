@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import { autoprefixer } from 'element-ui/src/utils/util';
+  import { autoprefixer } from 'urpt-ui/src/utils/util';
   const CARD_SCALE = 0.83;
   export default {
     name: 'ElCarouselItem',
@@ -88,7 +88,7 @@
         }
         if (parentType === 'card') {
           if (parentDirection === 'vertical') {
-            console.warn('[Element Warn][Carousel]vertical direction is not supported in card mode');
+            console.warn('[Urpt Warn][Carousel]vertical direction is not supported in card mode');
           }
           this.inStage = Math.round(Math.abs(index - activeIndex)) <= 1;
           this.active = index === activeIndex;

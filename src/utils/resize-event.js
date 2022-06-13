@@ -16,21 +16,21 @@ const resizeHandler = function(entries) {
 };
 
 /* istanbul ignore next */
-export const addResizeListener = function(element, fn) {
+export const addResizeListener = function(urpt, fn) {
   if (isServer) return;
-  if (!element.__resizeListeners__) {
-    element.__resizeListeners__ = [];
-    element.__ro__ = new ResizeObserver(debounce(16, resizeHandler));
-    element.__ro__.observe(element);
+  if (!urpt.__resizeListeners__) {
+    urpt.__resizeListeners__ = [];
+    urpt.__ro__ = new ResizeObserver(debounce(16, resizeHandler));
+    urpt.__ro__.observe(urpt);
   }
-  element.__resizeListeners__.push(fn);
+  urpt.__resizeListeners__.push(fn);
 };
 
 /* istanbul ignore next */
-export const removeResizeListener = function(element, fn) {
-  if (!element || !element.__resizeListeners__) return;
-  element.__resizeListeners__.splice(element.__resizeListeners__.indexOf(fn), 1);
-  if (!element.__resizeListeners__.length) {
-    element.__ro__.disconnect();
+export const removeResizeListener = function(urpt, fn) {
+  if (!urpt || !urpt.__resizeListeners__) return;
+  urpt.__resizeListeners__.splice(urpt.__resizeListeners__.indexOf(fn), 1);
+  if (!urpt.__resizeListeners__.length) {
+    urpt.__ro__.disconnect();
   }
 };

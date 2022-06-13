@@ -21,15 +21,15 @@ const camelCase = function(name) {
 /* istanbul ignore next */
 export const on = (function() {
   if (!isServer && document.addEventListener) {
-    return function(element, event, handler) {
-      if (element && event && handler) {
-        element.addEventListener(event, handler, false);
+    return function(urpt, event, handler) {
+      if (urpt && event && handler) {
+        urpt.addEventListener(event, handler, false);
       }
     };
   } else {
-    return function(element, event, handler) {
-      if (element && event && handler) {
-        element.attachEvent('on' + event, handler);
+    return function(urpt, event, handler) {
+      if (urpt && event && handler) {
+        urpt.attachEvent('on' + event, handler);
       }
     };
   }
@@ -38,15 +38,15 @@ export const on = (function() {
 /* istanbul ignore next */
 export const off = (function() {
   if (!isServer && document.removeEventListener) {
-    return function(element, event, handler) {
-      if (element && event) {
-        element.removeEventListener(event, handler, false);
+    return function(urpt, event, handler) {
+      if (urpt && event) {
+        urpt.removeEventListener(event, handler, false);
       }
     };
   } else {
-    return function(element, event, handler) {
-      if (element && event) {
-        element.detachEvent('on' + event, handler);
+    return function(urpt, event, handler) {
+      if (urpt && event) {
+        urpt.detachEvent('on' + event, handler);
       }
     };
   }
@@ -117,9 +117,9 @@ export function removeClass(el, cls) {
 };
 
 /* istanbul ignore next */
-export const getStyle = ieVersion < 9 ? function(element, styleName) {
+export const getStyle = ieVersion < 9 ? function(urpt, styleName) {
   if (isServer) return;
-  if (!element || !styleName) return null;
+  if (!urpt || !styleName) return null;
   styleName = camelCase(styleName);
   if (styleName === 'float') {
     styleName = 'styleFloat';
@@ -128,47 +128,47 @@ export const getStyle = ieVersion < 9 ? function(element, styleName) {
     switch (styleName) {
       case 'opacity':
         try {
-          return element.filters.item('alpha').opacity / 100;
+          return urpt.filters.item('alpha').opacity / 100;
         } catch (e) {
           return 1.0;
         }
       default:
-        return (element.style[styleName] || element.currentStyle ? element.currentStyle[styleName] : null);
+        return (urpt.style[styleName] || urpt.currentStyle ? urpt.currentStyle[styleName] : null);
     }
   } catch (e) {
-    return element.style[styleName];
+    return urpt.style[styleName];
   }
-} : function(element, styleName) {
+} : function(urpt, styleName) {
   if (isServer) return;
-  if (!element || !styleName) return null;
+  if (!urpt || !styleName) return null;
   styleName = camelCase(styleName);
   if (styleName === 'float') {
     styleName = 'cssFloat';
   }
   try {
-    var computed = document.defaultView.getComputedStyle(element, '');
-    return element.style[styleName] || computed ? computed[styleName] : null;
+    var computed = document.defaultView.getComputedStyle(urpt, '');
+    return urpt.style[styleName] || computed ? computed[styleName] : null;
   } catch (e) {
-    return element.style[styleName];
+    return urpt.style[styleName];
   }
 };
 
 /* istanbul ignore next */
-export function setStyle(element, styleName, value) {
-  if (!element || !styleName) return;
+export function setStyle(urpt, styleName, value) {
+  if (!urpt || !styleName) return;
 
   if (typeof styleName === 'object') {
     for (var prop in styleName) {
       if (styleName.hasOwnProperty(prop)) {
-        setStyle(element, prop, styleName[prop]);
+        setStyle(urpt, prop, styleName[prop]);
       }
     }
   } else {
     styleName = camelCase(styleName);
     if (styleName === 'opacity' && ieVersion < 9) {
-      element.style.filter = isNaN(value) ? '' : 'alpha(opacity=' + value * 100 + ')';
+      urpt.style.filter = isNaN(value) ? '' : 'alpha(opacity=' + value * 100 + ')';
     } else {
-      element.style[styleName] = value;
+      urpt.style[styleName] = value;
     }
   }
 };

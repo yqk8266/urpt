@@ -14,7 +14,7 @@ export declare class ElLink extends ElementUIComponent {
   /** Link underline */
   underline: boolean
 
-  /** Link icon, accepts an icon name of Element icon component */
+  /** Link icon, accepts an icon name of Urpt icon component */
   icon: string
 
   /** Link href */

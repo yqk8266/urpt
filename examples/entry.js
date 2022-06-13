@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import entry from './app';
 import VueRouter from 'vue-router';
-import Element from 'main/index.js';
+import Urpt from 'main/index.js';
 import hljs from 'highlight.js';
 import routes from './route.config';
 import demoBlock from './components/demo-block';
@@ -17,7 +17,7 @@ import './assets/styles/common.css';
 import './assets/styles/fonts/style.css';
 import icon from './icon.json';
 
-Vue.use(Element);
+Vue.use(Urpt);
 Vue.use(VueRouter);
 Vue.component('demo-block', demoBlock);
 Vue.component('main-footer', MainFooter);
@@ -58,7 +58,7 @@ router.afterEach(route => {
       return;
     }
   }
-  document.title = 'Element';
+  document.title = 'Urpt';
   ga('send', 'event', 'PageView', route.name);
 });
 

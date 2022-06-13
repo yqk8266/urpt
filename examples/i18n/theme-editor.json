@@ -67,7 +67,7 @@
       "theme-check": "查看",
       "theme-copy": "复制",
       "theme-edit": "编辑",
-      "description-element": "默认主题",
+      "description-urpt": "默认主题",
       "description-napos": "深色主题",
       "description-kiwi": "KIWI 主题"
     },
@@ -195,7 +195,7 @@
       "theme-check": "Preview",
       "theme-copy": "Copy",
       "theme-edit": "Edit",
-      "description-element": "Default theme",
+      "description-urpt": "Default theme",
       "description-napos": "Dark theme",
       "description-kiwi": "kiwi theme"
     },
@@ -277,7 +277,7 @@
       "theme-check": "Preview",
       "theme-copy": "Copy",
       "theme-edit": "Edit",
-      "description-element": "Default theme",
+      "description-urpt": "Default theme",
       "description-napos": "Dark theme",
       "description-kiwi": "kiwi theme"
     },
@@ -359,7 +359,7 @@
       "theme-check": "Preview",
       "theme-copy": "Copy",
       "theme-edit": "Edit",
-      "description-element": "Default theme",
+      "description-urpt": "Default theme",
       "description-napos": "Dark theme",
       "description-kiwi": "kiwi theme"
     },

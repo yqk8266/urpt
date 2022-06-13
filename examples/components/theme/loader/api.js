@@ -1,11 +1,11 @@
-import Element from 'main/index.js';
+import Urpt from 'main/index.js';
 import { post, get } from './ajax';
 
-const { version } = Element;
+const { version } = Urpt;
 
 const hostList = {
   local: 'http://localhost:3008/',
-  production: 'https://element-api.ele.me/element/theme/'
+  production: 'https://urpt-api.ele.me/urpt/theme/'
 };
 
 const host = hostList[process.env.FAAS_ENV] || hostList.production;

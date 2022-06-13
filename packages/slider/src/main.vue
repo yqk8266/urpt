@@ -74,10 +74,10 @@
 </template>
 
 <script type="text/babel">
-  import ElInputNumber from 'element-ui/packages/input-number';
+  import ElInputNumber from 'urpt-ui/packages/input-number';
   import SliderButton from './button.vue';
   import SliderMarker from './marker';
-  import Emitter from 'element-ui/src/mixins/emitter';
+  import Emitter from 'urpt-ui/src/mixins/emitter';
 
   export default {
     name: 'ElSlider',
@@ -221,7 +221,7 @@
       },
       setValues() {
         if (this.min > this.max) {
-          console.error('[Element Error][Slider]min should not be greater than max.');
+          console.error('[Urpt Error][Slider]min should not be greater than max.');
           return;
         }
         const val = this.value;
@@ -307,7 +307,7 @@
         if (!this.showStops || this.min > this.max) return [];
         if (this.step === 0) {
           process.env.NODE_ENV !== 'production' &&
-          console.warn('[Element Warn][Slider]step should not be 0.');
+          console.warn('[Urpt Warn][Slider]step should not be 0.');
           return [];
         }
         const stopCount = (this.max - this.min) / this.step;

@@ -346,7 +346,7 @@
 - Progress
   - Add strokeLinecap prop (#17552 by @iamkun)
 - InfiniteScroll
-  - Skip trigger event on invisible element (#17553 by @iamkun)
+  - Skip trigger event on invisible urpt (#17553 by @iamkun)
 - Image
   - Perfect picture preview behavior (#16985 by @luckyCao)
   - Fix shield the page when preview big image (#16796 by @luckyCao)
@@ -380,7 +380,7 @@
 - Popover
   - Add close-delay prop (#16671 by @LachlanStuart)
 - Theme
-  - Add Chrome Extension: Element Theme Extension (#16686 by @iamkun)
+  - Add Chrome Extension: Urpt Theme Extension (#16686 by @iamkun)
 - Icon
   - Add font-display to @font-face declaration (#16805 by @iamfaizalandyka)
 
@@ -1045,7 +1045,7 @@ Docs
   - Mise à jour de la doc sur le thème (par @wangguohaohao dans #14297)
   - Le style de l'icône change lorsque vous passez dessus (par @tuxinghuan dans #14295)
 - Build
-  - Minification du CSS et du JS pour le site d'Element (par @iamkun dans #14430)
+  - Minification du CSS et du JS pour le site d'Urpt (par @iamkun dans #14430)
   - Accélération de webpack (par @hetech dans #14484)
   - Utilisation du cli pour sélectionner la version de publication (par @hetech dans #14354)
 - Installation de stale pour la gestion des issues (par @island205 dans #14392)
@@ -1687,7 +1687,7 @@ Docs
 
 - Ajouté la fonction de hook "avant suppression" pour Upload, #8788 (par @firesh)
 - Correction de la valeur initiale de `error` qui ne fonctionnait pas pour FormItem, #8840
-- La directive Loading prend maintenant en charge le nom de classe personnalisé grâce à l'attribut `element-loading-custom-class`, #8826 (par @earlymeme)
+- La directive Loading prend maintenant en charge le nom de classe personnalisé grâce à l'attribut `urpt-loading-custom-class`, #8826 (par @earlymeme)
 - Correction CarouselItem devenant invisible lorsque les données sont mises à jour de manière asynchrone, #8921
 - Ajout de l'attribut `renderAfterExpand` pour Tree, #8972
 

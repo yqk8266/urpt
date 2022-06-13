@@ -1,17 +1,17 @@
 import Vue from 'vue';
 import {
   PopupManager
-} from 'element-ui/src/utils/popup';
+} from 'urpt-ui/src/utils/popup';
 
 const PopperJS = Vue.prototype.$isServer ? function() {} : require('./popper');
 const stop = e => e.stopPropagation();
 
 /**
- * @param {HTMLElement} [reference=$refs.reference] - The reference element used to position the popper.
- * @param {HTMLElement} [popper=$refs.popper] - The HTML element used as popper, or a configuration used to generate the popper.
+ * @param {HTMLElement} [reference=$refs.reference] - The reference urpt used to position the popper.
+ * @param {HTMLElement} [popper=$refs.popper] - The HTML urpt used as popper, or a configuration used to generate the popper.
  * @param {String} [placement=button] - Placement of the popper accepted values: top(-start, -end), right(-start, -end), bottom(-start, -end), left(-start, -end)
  * @param {Number} [offset=0] - Amount of pixels the popper will be shifted (can be negative).
- * @param {Boolean} [visible=false] Visibility of the popup element.
+ * @param {Boolean} [visible=false] Visibility of the popup urpt.
  * @param {Boolean} [visible-arrow=false] Visibility of the arrow, no style.
  */
 export default {
@@ -157,7 +157,7 @@ export default {
         : ['top', 'bottom'].indexOf(placement) > -1 ? `center ${ origin }` : `${ origin } center`;
     },
 
-    appendArrow(element) {
+    appendArrow(urpt) {
       let hash;
       if (this.appended) {
         return;
@@ -165,9 +165,9 @@ export default {
 
       this.appended = true;
 
-      for (let item in element.attributes) {
-        if (/^_v-/.test(element.attributes[item].name)) {
-          hash = element.attributes[item].name;
+      for (let item in urpt.attributes) {
+        if (/^_v-/.test(urpt.attributes[item].name)) {
+          hash = urpt.attributes[item].name;
           break;
         }
       }
@@ -179,7 +179,7 @@ export default {
       }
       arrow.setAttribute('x-arrow', '');
       arrow.className = 'popper__arrow';
-      element.appendChild(arrow);
+      urpt.appendChild(arrow);
     }
   },
 

@@ -3,16 +3,16 @@ var aria = aria || {};
 aria.Utils = aria.Utils || {};
 
 /**
- * @desc Set focus on descendant nodes until the first focusable element is
+ * @desc Set focus on descendant nodes until the first focusable urpt is
  *       found.
- * @param element
+ * @param urpt
  *          DOM node for which to find the first focusable descendant.
  * @returns
- *  true if a focusable element is found and focus is set.
+ *  true if a focusable urpt is found and focus is set.
  */
-aria.Utils.focusFirstDescendant = function(element) {
-  for (var i = 0; i < element.childNodes.length; i++) {
-    var child = element.childNodes[i];
+aria.Utils.focusFirstDescendant = function(urpt) {
+  for (var i = 0; i < urpt.childNodes.length; i++) {
+    var child = urpt.childNodes[i];
     if (aria.Utils.attemptFocus(child) || aria.Utils.focusFirstDescendant(child)) {
       return true;
     }
@@ -22,15 +22,15 @@ aria.Utils.focusFirstDescendant = function(element) {
 
 /**
  * @desc Find the last descendant node that is focusable.
- * @param element
+ * @param urpt
  *          DOM node for which to find the last focusable descendant.
  * @returns
- *  true if a focusable element is found and focus is set.
+ *  true if a focusable urpt is found and focus is set.
  */
 
-aria.Utils.focusLastDescendant = function(element) {
-  for (var i = element.childNodes.length - 1; i >= 0; i--) {
-    var child = element.childNodes[i];
+aria.Utils.focusLastDescendant = function(urpt) {
+  for (var i = urpt.childNodes.length - 1; i >= 0; i--) {
+    var child = urpt.childNodes[i];
     if (aria.Utils.attemptFocus(child) || aria.Utils.focusLastDescendant(child)) {
       return true;
     }
@@ -40,38 +40,38 @@ aria.Utils.focusLastDescendant = function(element) {
 
 /**
  * @desc Set Attempt to set focus on the current node.
- * @param element
+ * @param urpt
  *          The node to attempt to focus on.
  * @returns
- *  true if element is focused.
+ *  true if urpt is focused.
  */
-aria.Utils.attemptFocus = function(element) {
-  if (!aria.Utils.isFocusable(element)) {
+aria.Utils.attemptFocus = function(urpt) {
+  if (!aria.Utils.isFocusable(urpt)) {
     return false;
   }
   aria.Utils.IgnoreUtilFocusChanges = true;
   try {
-    element.focus();
+    urpt.focus();
   } catch (e) {
   }
   aria.Utils.IgnoreUtilFocusChanges = false;
-  return (document.activeElement === element);
+  return (document.activeElement === urpt);
 };
 
-aria.Utils.isFocusable = function(element) {
-  if (element.tabIndex > 0 || (element.tabIndex === 0 && element.getAttribute('tabIndex') !== null)) {
+aria.Utils.isFocusable = function(urpt) {
+  if (urpt.tabIndex > 0 || (urpt.tabIndex === 0 && urpt.getAttribute('tabIndex') !== null)) {
     return true;
   }
 
-  if (element.disabled) {
+  if (urpt.disabled) {
     return false;
   }
 
-  switch (element.nodeName) {
+  switch (urpt.nodeName) {
     case 'A':
-      return !!element.href && element.rel !== 'ignore';
+      return !!urpt.href && urpt.rel !== 'ignore';
     case 'INPUT':
-      return element.type !== 'hidden' && element.type !== 'file';
+      return urpt.type !== 'hidden' && urpt.type !== 'file';
     case 'BUTTON':
     case 'SELECT':
     case 'TEXTAREA':
@@ -84,7 +84,7 @@ aria.Utils.isFocusable = function(element) {
 /**
  * 触发一个事件
  * mouseenter, mouseleave, mouseover, keyup, change, click 等
- * @param  {Element} elm
+ * @param  {Urpt} elm
  * @param  {String} name
  * @param  {*} opts
  */

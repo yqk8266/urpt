@@ -42,7 +42,7 @@
 
 ### 自定义样式
 
-Element 提供的排版模式有时候并不满足要求，当您想要用自己定义的模板时，可以通过一个具名 Slot 来自己设定模板。
+Urpt 提供的排版模式有时候并不满足要求，当您想要用自己定义的模板时，可以通过一个具名 Slot 来自己设定模板。
 
 我们提供了不同的模板单元可供使用，具体可选值请看 API 详细描述。 建议在描述模板的时候，尽量靠近真实的 DOM 结构，这样可以避免 DOM 高度差距引起的抖动。
 :::demo
@@ -101,7 +101,7 @@ Element 提供的排版模式有时候并不满足要求，当您想要用自己
       <template>
         <el-card :body-style="{ padding: '0px', marginBottom: '1px' }">
           <img
-            src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
+            src="https://shadow.elemecdn.com/app/urpt/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
             class="image"
           />
           <div style="padding: 14px;">
@@ -262,7 +262,7 @@ Element 提供的排版模式有时候并不满足要求，当您想要用自己
       <template>
         <el-card :body-style="{ padding: '0px', marginBottom: '1px'}">
           <img
-            src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
+            src="https://shadow.elemecdn.com/app/urpt/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
             class="image"
           />
           <div style="padding: 14px;">

@@ -97,7 +97,7 @@
                 changeCurrentName();
                 this.$refs.nav && this.$refs.nav.removeFocus();
               }, () => {
-                // https://github.com/ElemeFE/element/pull/14816
+                // https://github.com/ElemeFE/urpt/pull/14816
                 // ignore promise rejection in `before-leave` hook
               });
           } else if (before !== false) {

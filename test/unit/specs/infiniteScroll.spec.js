@@ -29,7 +29,7 @@ describe('InfiniteScroll', () => {
     expect(vm.$el.innerText.indexOf('2') > -1).to.be.true;
   });
 
-  it('invisible element not trigger', async() => {
+  it('invisible urpt not trigger', async() => {
     vm = createVue({
       template: `
       <div v-show="false">

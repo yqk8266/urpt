@@ -1,8 +1,8 @@
 <script type="text/jsx">
-  import emitter from 'element-ui/src/mixins/emitter';
-  import Migrating from 'element-ui/src/mixins/migrating';
-  import Menubar from 'element-ui/src/utils/menu/aria-menubar';
-  import { addClass, removeClass, hasClass } from 'element-ui/src/utils/dom';
+  import emitter from 'urpt-ui/src/mixins/emitter';
+  import Migrating from 'urpt-ui/src/mixins/migrating';
+  import Menubar from 'urpt-ui/src/utils/menu/aria-menubar';
+  import { addClass, removeClass, hasClass } from 'urpt-ui/src/utils/dom';
 
   export default {
     name: 'ElMenu',
@@ -273,7 +273,7 @@
             this.activeIndex = oldActiveIndex;
             if (error) {
               // vue-router 3.1.0+ push/replace cause NavigationDuplicated error 
-              // https://github.com/ElemeFE/element/issues/17044
+              // https://github.com/ElemeFE/urpt/issues/17044
               if (error.name === 'NavigationDuplicated') return
               console.error(error)
             }

@@ -52,9 +52,9 @@
 </template>
 
 <script>
-import { on, off } from 'element-ui/src/utils/dom';
-import { rafThrottle, isFirefox } from 'element-ui/src/utils/util';
-import { PopupManager } from 'element-ui/src/utils/popup';
+import { on, off } from 'urpt-ui/src/utils/dom';
+import { rafThrottle, isFirefox } from 'urpt-ui/src/utils/util';
+import { PopupManager } from 'urpt-ui/src/utils/popup';
 
 const Mode = {
   CONTAIN: {

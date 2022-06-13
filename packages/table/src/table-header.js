@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import { hasClass, addClass, removeClass } from 'element-ui/src/utils/dom';
-import ElCheckbox from 'element-ui/packages/checkbox';
+import { hasClass, addClass, removeClass } from 'urpt-ui/src/utils/dom';
+import ElCheckbox from 'urpt-ui/packages/checkbox';
 import FilterPanel from './filter-panel.vue';
 import LayoutObserver from './layout-observer';
 import { mapStates } from './store/helper';
@@ -192,7 +192,7 @@ export default {
   },
 
   mounted() {
-    // nextTick 是有必要的 https://github.com/ElemeFE/element/pull/11311
+    // nextTick 是有必要的 https://github.com/ElemeFE/urpt/pull/11311
     this.$nextTick(() => {
       const { prop, order } = this.defaultSort;
       const init = true;

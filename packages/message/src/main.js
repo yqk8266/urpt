@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Main from './main.vue';
-import { PopupManager } from 'element-ui/src/utils/popup';
-import { isVNode } from 'element-ui/src/utils/vdom';
-import { isObject } from 'element-ui/src/utils/types';
+import { PopupManager } from 'urpt-ui/src/utils/popup';
+import { isVNode } from 'urpt-ui/src/utils/vdom';
+import { isObject } from 'urpt-ui/src/utils/types';
 let MessageConstructor = Vue.extend(Main);
 
 let instance;

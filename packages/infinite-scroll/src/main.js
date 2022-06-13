@@ -4,21 +4,21 @@ import {
   isFunction,
   isUndefined,
   isDefined
-} from 'element-ui/src/utils/types';
+} from 'urpt-ui/src/utils/types';
 import {
   getScrollContainer
-} from 'element-ui/src/utils/dom';
+} from 'urpt-ui/src/utils/dom';
 
-const getStyleComputedProperty = (element, property) => {
-  if (element === window) {
-    element = document.documentElement;
+const getStyleComputedProperty = (urpt, property) => {
+  if (urpt === window) {
+    urpt = document.documentElement;
   }
 
-  if (element.nodeType !== 1) {
+  if (urpt.nodeType !== 1) {
     return [];
   }
   // NOTE: 1 DOM access here
-  const css = window.getComputedStyle(element, null);
+  const css = window.getComputedStyle(urpt, null);
   return property ? css[property] : css;
 };
 

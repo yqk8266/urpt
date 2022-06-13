@@ -7,7 +7,7 @@
   </form>
 </template>
 <script>
-  import objectAssign from 'element-ui/src/utils/merge';
+  import objectAssign from 'urpt-ui/src/utils/merge';
 
   export default {
     name: 'ElForm',
@@ -89,7 +89,7 @@
     methods: {
       resetFields() {
         if (!this.model) {
-          console.warn('[Element Warn][Form]model is required for resetFields to work.');
+          console.warn('[Urpt Warn][Form]model is required for resetFields to work.');
           return;
         }
         this.fields.forEach(field => {
@@ -108,7 +108,7 @@
       },
       validate(callback) {
         if (!this.model) {
-          console.warn('[Element Warn][Form]model is required for validate to work!');
+          console.warn('[Urpt Warn][Form]model is required for validate to work!');
           return;
         }
 
@@ -149,7 +149,7 @@
         props = [].concat(props);
         const fields = this.fields.filter(field => props.indexOf(field.prop) !== -1);
         if (!fields.length) {
-          console.warn('[Element Warn]please pass correct props!');
+          console.warn('[Urpt Warn]please pass correct props!');
           return;
         }
 

@@ -379,7 +379,7 @@
 - Popover
   - 添加 close-delay 属性 (#16671 by @LachlanStuart)
 - Theme
-  - 增加 Chrome 插件: Element Theme Extension (#16686 by @iamkun)
+  - 增加 Chrome 插件: Urpt Theme Extension (#16686 by @iamkun)
 - Icon
   - 支持 font-display 属性的配置 (#16805 by @iamfaizalandyka)
 
@@ -1042,7 +1042,7 @@ Docs
   - 优化自定义主题文档 (by @wangguohao in #14297)
   - 为 Icon 文档添加 hover 效果 (by @tuxinghuan in #14295)
 - Build
-  - 压缩 Element 文档站的 JS 和 CSS 文件 (by @iamkun in #14430)
+  - 压缩 Urpt 文档站的 JS 和 CSS 文件 (by @iamkun in #14430)
   - 优化 Webpack 打包速度，从6分钟优化到1分多 (by @hetech in #14484)
   - 添加 CLI 工具，选择版本号 (by @hetech in #14354)
 - 使用 Stale 来管理过时（暂定1年）的 Issue 和 PR (by @island205 in #14392)
@@ -1686,7 +1686,7 @@ Docs
 
 - 新增 Upload 的 `before-remove` 钩子方法，#8788（by @firesh）
 - 修复 FormItem 的 `error` 属性初始值无效的问题，#8840
-- 通过指令调用的 Loading 现在支持以 `element-loading-custom-class` 属性的方式设置自定义类名，#8826（by @earlymeme）
+- 通过指令调用的 Loading 现在支持以 `urpt-loading-custom-class` 属性的方式设置自定义类名，#8826（by @earlymeme）
 - 修复 CarouselItem 为异步获取时被隐藏的问题，#8921
 - 新增 Tree 的 `renderAfterExpand` 属性，#8972
 
@@ -1781,7 +1781,7 @@ Docs
   - 新增 TypeScript 类型声明
   - 重绘了全部图标，并新增了部分图标
   - 新增了一系列基于断点的工具类，用于当视口尺寸满足一定条件时隐藏元素
-  - 新增全局配置组件尺寸的功能。在引入 Element 时，配置 `size` 字段可以改变所有组件的默认尺寸
+  - 新增全局配置组件尺寸的功能。在引入 Urpt 时，配置 `size` 字段可以改变所有组件的默认尺寸
 - Button
   - 新增 `round` 属性，用于圆角按钮 #6643
 - TimeSelect
