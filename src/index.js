@@ -22,6 +22,11 @@ import Col from '../packages/col/index.js';
 import Aside from '../packages/aside/index.js';
 import Main from '../packages/main/index.js';
 import Footer from '../packages/footer/index.js';
+import InfiniteScroll from '../packages/infinite-scroll/index.js';
+import Scrollbar from '../packages/scrollbar/index.js';
+import Backtop from '../packages/backtop/index.js';
+import Icon from '../packages/icon/index.js';
+import Autocomplete from '../packages/autocomplete/index.js';
 import locale from 'urpt-ui/src/locale';
 import CollapseTransition from 'urpt-ui/src/transitions/collapse-transition';
 
@@ -48,6 +53,10 @@ const components = [
   Aside,
   Main,
   Footer,
+  Scrollbar,
+  Backtop,
+  Icon,
+  Autocomplete,
   CollapseTransition
 ];
 
@@ -60,21 +69,11 @@ const install = function(Vue, opts = {}) {
   });
 
   Vue.use(InfiniteScroll);
-  Vue.use(Loading.directive);
 
   Vue.prototype.$ELEMENT = {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
-
-  Vue.prototype.$loading = Loading.service;
-  Vue.prototype.$msgbox = MessageBox;
-  Vue.prototype.$alert = MessageBox.alert;
-  Vue.prototype.$confirm = MessageBox.confirm;
-  Vue.prototype.$prompt = MessageBox.prompt;
-  Vue.prototype.$notify = Notification;
-  Vue.prototype.$message = Message;
-
 };
 
 /* istanbul ignore if */
@@ -88,7 +87,6 @@ export default {
   i18n: locale.i18n,
   install,
   CollapseTransition,
-  Loading,
   Input,
   InputNumber,
   Radio,
@@ -110,5 +108,10 @@ export default {
   Col,
   Aside,
   Main,
-  Footer
+  Footer,
+  InfiniteScroll,
+  Scrollbar,
+  Backtop,
+  Icon,
+  Autocomplete
 };

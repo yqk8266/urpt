@@ -20,5 +20,10 @@
   "col": "./packages/col/index.js",
   "aside": "./packages/aside/index.js",
   "main": "./packages/main/index.js",
-  "footer": "./packages/footer/index.js"
+  "footer": "./packages/footer/index.js",
+  "infinite-scroll": "./packages/infinite-scroll/index.js",
+  "scrollbar": "./packages/scrollbar/index.js",
+  "backtop": "./packages/backtop/index.js",
+  "icon": "./packages/icon/index.js",
+  "autocomplete": "./packages/autocomplete/index.js"
 }
