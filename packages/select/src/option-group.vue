@@ -15,9 +15,9 @@
   export default {
     mixins: [Emitter],
 
-    name: 'ElOptionGroup',
+    name: 'TcOptionGroup',
 
-    componentName: 'ElOptionGroup',
+    componentName: 'TcOptionGroup',
 
     props: {
       label: String,

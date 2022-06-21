@@ -57,7 +57,7 @@
   import Emitter from 'urpt-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElCheckbox',
+    name: 'TcCheckbox',
 
     mixins: [Emitter],
 
@@ -70,7 +70,7 @@
       }
     },
 
-    componentName: 'ElCheckbox',
+    componentName: 'TcCheckbox',
 
     data() {
       return {

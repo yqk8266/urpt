@@ -39,7 +39,7 @@
   import Emitter from 'urpt-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElRadioButton',
+    name: 'TcRadioButton',
 
     mixins: [Emitter],
 

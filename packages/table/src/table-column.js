@@ -5,7 +5,7 @@ import ElCheckbox from 'urpt-ui/packages/checkbox';
 let columnIdSeed = 1;
 
 export default {
-  name: 'ElTableColumn',
+  name: 'TcTableColumn',
 
   props: {
     type: {

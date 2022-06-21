@@ -11,9 +11,9 @@
   import Popper from 'urpt-ui/src/utils/vue-popper';
 
   export default {
-    name: 'ElSelectDropdown',
+    name: 'TcSelectDropdown',
 
-    componentName: 'ElSelectDropdown',
+    componentName: 'TcSelectDropdown',
 
     mixins: [Popper],
 

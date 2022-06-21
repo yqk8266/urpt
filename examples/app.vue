@@ -11,7 +11,6 @@
 <script>
   import { use } from 'main/locale';
   import zhLocale from 'main/locale/lang/zh-CN';
-  import enLocale from 'main/locale/lang/en';
 
   const lang = location.hash.replace('#', '').split('/')[1] || 'zh-CN';
   const localize = lang => {
@@ -20,7 +19,6 @@
         use(zhLocale);
         break;
       default:
-        use(enLocale);
     }
   };
   localize(lang);
@@ -40,7 +38,7 @@
     watch: {
       lang(val) {
         if (val === 'zh-CN') {
-          this.suggestJump();
+          // this.suggestJump();
         }
         localize(val);
       }

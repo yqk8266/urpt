@@ -14,6 +14,7 @@ import OptionGroup from '../packages/option-group/index.js';
 import Button from '../packages/button/index.js';
 import ButtonGroup from '../packages/button-group/index.js';
 import Table from '../packages/table/index.js';
+import Tag from '../packages/tag/index.js';
 import TableColumn from '../packages/table-column/index.js';
 import Form from '../packages/form/index.js';
 import FormItem from '../packages/form-item/index.js';
@@ -21,7 +22,6 @@ import Row from '../packages/row/index.js';
 import Col from '../packages/col/index.js';
 import Aside from '../packages/aside/index.js';
 import Main from '../packages/main/index.js';
-import Footer from '../packages/footer/index.js';
 import InfiniteScroll from '../packages/infinite-scroll/index.js';
 import Scrollbar from '../packages/scrollbar/index.js';
 import Backtop from '../packages/backtop/index.js';
@@ -45,6 +45,7 @@ const components = [
   Button,
   ButtonGroup,
   Table,
+  Tag,
   TableColumn,
   Form,
   FormItem,
@@ -52,7 +53,6 @@ const components = [
   Col,
   Aside,
   Main,
-  Footer,
   Scrollbar,
   Backtop,
   Icon,
@@ -101,6 +101,7 @@ export default {
   Button,
   ButtonGroup,
   Table,
+  Tag,
   TableColumn,
   Form,
   FormItem,
@@ -108,7 +109,6 @@ export default {
   Col,
   Aside,
   Main,
-  Footer,
   InfiniteScroll,
   Scrollbar,
   Backtop,

@@ -1,5 +1,5 @@
 export default {
-  name: 'ElTableRow',
+  name: 'TcTableRow',
   props: [
     'columns',
     'row',

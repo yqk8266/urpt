@@ -26,7 +26,7 @@
     components: { ElScrollbar },
     mixins: [Popper, Emitter],
 
-    componentName: 'ElAutocompleteSuggestions',
+    componentName: 'TcAutocompleteSuggestions',
 
     data() {
       return {

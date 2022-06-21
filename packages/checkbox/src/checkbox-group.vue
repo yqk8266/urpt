@@ -2,9 +2,9 @@
   import Emitter from 'urpt-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElCheckboxGroup',
+    name: 'TcCheckboxGroup',
 
-    componentName: 'ElCheckboxGroup',
+    componentName: 'TcCheckboxGroup',
 
     mixins: [Emitter],
 

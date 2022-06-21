@@ -18,9 +18,9 @@
     DOWN: 40
   });
   export default {
-    name: 'ElRadioGroup',
+    name: 'TcRadioGroup',
 
-    componentName: 'ElRadioGroup',
+    componentName: 'TcRadioGroup',
 
     inject: {
       elFormItem: {

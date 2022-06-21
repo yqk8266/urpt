@@ -213,7 +213,7 @@
 </template>
 
 <script type="text/babel">
-  import ElCheckbox from 'urpt-ui/packages/checkbox';
+  import TcCheckbox from 'urpt-ui/packages/checkbox';
   import { debounce, throttle } from 'throttle-debounce';
   import { addResizeListener, removeResizeListener } from 'urpt-ui/src/utils/resize-event';
   import Mousewheel from 'urpt-ui/src/directives/mousewheel';
@@ -229,7 +229,7 @@
   let tableIdSeed = 1;
 
   export default {
-    name: 'ElTable',
+    name: 'TcTable',
 
     mixins: [Locale, Migrating],
 
@@ -338,7 +338,7 @@
       TableHeader,
       TableFooter,
       TableBody,
-      ElCheckbox
+      TcCheckbox
     },
 
     methods: {

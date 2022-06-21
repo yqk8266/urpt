@@ -1,7 +1,7 @@
 export default {
-  name: 'ElRow',
+  name: 'TcRow',
 
-  componentName: 'ElRow',
+  componentName: 'TcRow',
 
   props: {
     tag: {

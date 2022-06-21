@@ -26,7 +26,7 @@
       @keydown.enter="increase">
       <i :class="`el-icon-${controlsAtRight ? 'arrow-up' : 'plus'}`"></i>
     </span>
-    <el-input
+    <tc-input
       ref="input"
       :value="displayValue"
       :placeholder="placeholder"
@@ -42,16 +42,16 @@
       @focus="handleFocus"
       @input="handleInput"
       @change="handleInputChange">
-    </el-input>
+    </tc-input>
   </div>
 </template>
 <script>
-  import ElInput from 'urpt-ui/packages/input';
+  import TcInput from 'urpt-ui/packages/input';
   import Focus from 'urpt-ui/src/mixins/focus';
   import RepeatClick from 'urpt-ui/src/directives/repeat-click';
 
   export default {
-    name: 'ElInputNumber',
+    name: 'TcInputNumber',
     mixins: [Focus('input')],
     inject: {
       elForm: {
@@ -65,7 +65,7 @@
       repeatClick: RepeatClick
     },
     components: {
-      ElInput
+      TcInput
     },
     props: {
       step: {

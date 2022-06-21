@@ -47,36 +47,6 @@ export default {
     content: `## ${ComponentName} ${chineseName}`
   },
   {
-    filename: path.join('../../examples/docs/en-US', `${componentname}.md`),
-    content: `## ${ComponentName}`
-  },
-  {
-    filename: path.join('../../examples/docs/es', `${componentname}.md`),
-    content: `## ${ComponentName}`
-  },
-  {
-    filename: path.join('../../examples/docs/fr-FR', `${componentname}.md`),
-    content: `## ${ComponentName}`
-  },
-  {
-    filename: path.join('../../test/unit/specs', `${componentname}.spec.js`),
-    content: `import { createTest, destroyVM } from '../util';
-import ${ComponentName} from 'packages/${componentname}';
-
-describe('${ComponentName}', () => {
-  let vm;
-  afterEach(() => {
-    destroyVM(vm);
-  });
-
-  it('create', () => {
-    vm = createTest(${ComponentName}, true);
-    expect(vm.$el).to.exist;
-  });
-});
-`
-  },
-  {
     filename: path.join('../../packages/theme-chalk/src', `${componentname}.scss`),
     content: `@import "mixins/mixins";
 @import "common/var";

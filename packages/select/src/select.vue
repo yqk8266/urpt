@@ -67,7 +67,7 @@
         :style="{ 'flex-grow': '1', width: inputLength / (inputWidth - 32) + '%', 'max-width': inputWidth - 42 + 'px' }"
         ref="input">
     </div>
-    <el-input
+    <tc-input
       ref="reference"
       v-model="selectedLabel"
       type="text"
@@ -101,7 +101,7 @@
         <i v-show="!showClose" :class="['el-select__caret', 'el-input__icon', 'el-icon-' + iconClass]"></i>
         <i v-if="showClose" class="el-select__caret el-input__icon el-icon-circle-close" @click="handleClearClick"></i>
       </template>
-    </el-input>
+    </tc-input>
     <transition
       name="el-zoom-in-top"
       @before-enter="handleMenuEnter"
@@ -117,11 +117,11 @@
           ref="scrollbar"
           :class="{ 'is-empty': !allowCreate && query && filteredOptionsCount === 0 }"
           v-show="options.length > 0 && !loading">
-          <el-option
+          <tc-option
             :value="query"
             created
             v-if="showNewOption">
-          </el-option>
+          </tc-option>
           <slot></slot>
         </el-scrollbar>
         <template v-if="emptyText && (!allowCreate || loading || (allowCreate && options.length === 0 ))">
@@ -139,9 +139,9 @@
   import Emitter from 'urpt-ui/src/mixins/emitter';
   import Focus from 'urpt-ui/src/mixins/focus';
   import Locale from 'urpt-ui/src/mixins/locale';
-  import ElInput from 'urpt-ui/packages/input';
+  import TcInput from 'urpt-ui/packages/input';
   import ElSelectMenu from './select-dropdown.vue';
-  import ElOption from './option.vue';
+  import TcOption from './option.vue';
   import ElTag from 'urpt-ui/packages/tag';
   import ElScrollbar from 'urpt-ui/packages/scrollbar';
   import debounce from 'throttle-debounce/debounce';
@@ -155,9 +155,9 @@
   export default {
     mixins: [Emitter, Locale, Focus('reference'), NavigationMixin],
 
-    name: 'ElSelect',
+    name: 'TcSelect',
 
-    componentName: 'ElSelect',
+    componentName: 'TcSelect',
 
     inject: {
       elForm: {
@@ -243,9 +243,9 @@
     },
 
     components: {
-      ElInput,
+      TcInput,
       ElSelectMenu,
-      ElOption,
+      TcOption,
       ElTag,
       ElScrollbar
     },

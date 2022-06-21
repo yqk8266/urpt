@@ -22,9 +22,9 @@
   export default {
     mixins: [Emitter],
 
-    name: 'ElOption',
+    name: 'TcOption',
 
-    componentName: 'ElOption',
+    componentName: 'TcOption',
 
     inject: ['select'],
 

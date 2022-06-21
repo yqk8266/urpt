@@ -115,9 +115,9 @@
   import {isKorean} from 'urpt-ui/src/utils/shared';
 
   export default {
-    name: 'ElInput',
+    name: 'TcInput',
 
-    componentName: 'ElInput',
+    componentName: 'TcInput',
 
     mixins: [emitter, Migrating],
 

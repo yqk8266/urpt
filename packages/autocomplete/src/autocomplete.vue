@@ -7,7 +7,7 @@
     :aria-expanded="suggestionVisible"
     :aria-owns="id"
   >
-    <el-input
+    <tc-input
       ref="input"
       v-bind="[$props, $attrs]"
       @input="handleInput"
@@ -32,8 +32,8 @@
       <template slot="suffix" v-if="$slots.suffix">
         <slot name="suffix"></slot>
       </template>
-    </el-input>
-    <el-autocomplete-suggestions
+    </tc-input>
+    <tc-autocomplete-suggestions
       visible-arrow
       :class="[popperClass ? popperClass : '']"
       :popper-options="popperOptions"
@@ -54,31 +54,31 @@
           {{ item[valueKey] }}
         </slot>
       </li>
-    </el-autocomplete-suggestions>
+    </tc-autocomplete-suggestions>
   </div>
 </template>
 <script>
   import debounce from 'throttle-debounce/debounce';
-  import ElInput from 'urpt-ui/packages/input';
+  import TcInput from 'urpt-ui/packages/input';
   import Clickoutside from 'urpt-ui/src/utils/clickoutside';
-  import ElAutocompleteSuggestions from './autocomplete-suggestions.vue';
+  import TcAutocompleteSuggestions from './autocomplete-suggestions.vue';
   import Emitter from 'urpt-ui/src/mixins/emitter';
   import Migrating from 'urpt-ui/src/mixins/migrating';
   import { generateId } from 'urpt-ui/src/utils/util';
   import Focus from 'urpt-ui/src/mixins/focus';
 
   export default {
-    name: 'ElAutocomplete',
+    name: 'TcAutocomplete',
 
     mixins: [Emitter, Focus('input'), Migrating],
 
     inheritAttrs: false,
 
-    componentName: 'ElAutocomplete',
+    componentName: 'TcAutocomplete',
 
     components: {
-      ElInput,
-      ElAutocompleteSuggestions
+      TcInput,
+      TcAutocompleteSuggestions
     },
 
     directives: { Clickoutside },

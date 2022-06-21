@@ -15,7 +15,7 @@ module.exports = {
     filename: 'urpt-ui.common.js',
     chunkFilename: '[id].js',
     libraryExport: 'default',
-    library: 'ELEMENT',
+    library: 'URPT',
     libraryTarget: 'commonjs2'
   },
   resolve: {

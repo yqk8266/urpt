@@ -64,7 +64,7 @@ const convertToRows = (originColumns) => {
 };
 
 export default {
-  name: 'ElTableHeader',
+  name: 'TcTableHeader',
 
   mixins: [LayoutObserver],
 

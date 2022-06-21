@@ -47,7 +47,7 @@
   import Emitter from 'urpt-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElCheckboxButton',
+    name: 'TcCheckboxButton',
 
     mixins: [Emitter],
 
