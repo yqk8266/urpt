@@ -1,17 +1,17 @@
 ## Radio 单选框
 
-在一组备选项中进行单选
+基本组件-单选框
 
-### 基础用法
+### 代码示例
 
-由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。
+通过v-model可以双向绑定数据。
 
-:::demo 要使用 Radio 组件，只需要设置`v-model`绑定变量，选中意味着变量的值为相应 Radio `label`属性的值，`label`可以是`String`、`Number`或`Boolean`。
+:::demo 选中的值为 Radio对应的 `label`属性的值，`label`可以是`String`、`Number`或`Boolean`。
 
 ```html
 <template>
-  <tc-radio v-model="radio" label="1">备选项</tc-radio>
-  <tc-radio v-model="radio" label="2">备选项</tc-radio>
+  <tc-radio v-model="radio" label="1">城乡客运</tc-radio>
+  <tc-radio v-model="radio" label="2">定制客运</tc-radio>
 </template>
 
 <script>
@@ -26,22 +26,22 @@
 ```
 :::
 
-### 禁用状态
+### 禁用
 
 单选框不可用的状态。
 
 :::demo 只要在`tc-radio`元素中设置`disabled`属性即可，它接受一个`Boolean`，`true`为禁用。
 ```html
 <template>
-  <tc-radio disabled v-model="radio" label="禁用">备选项</tc-radio>
-  <tc-radio disabled v-model="radio" label="选中且禁用">备选项</tc-radio>
+  <tc-radio disabled v-model="radio" label="城乡客运">城乡客运</tc-radio>
+  <tc-radio disabled v-model="radio" label="定制客运">定制客运</tc-radio>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        radio: '选中且禁用'
+        radio: '定制客运'
       };
     }
   }
@@ -49,11 +49,11 @@
 ```
 :::
 
-### 单选框组
+### 选项组
 
-适用于在多个互斥的选项中选择的场景
+适用于在多个互斥的选项中
 
-:::demo 结合`tc-radio-group`元素和子元素`tc-radio`可以实现单选组，在`tc-radio-group`中绑定`v-model`，在`tc-radio`中设置好`label`即可，无需再给每一个`tc-radio`绑定变量，另外，还提供了`change`事件来响应变化，它会传入一个参数`value`。
+:::demo 结合`tc-radio-group`元素和子元素`tc-radio`可以实现单选组，在`tc-radio-group`中绑定`v-model`，在`tc-radio`中设置好`label`即可，每个radio的内容可自定义，不填写则默认label的值。
 
 ```html
 <template>
@@ -76,11 +76,11 @@
 ```
 :::
 
-### 按钮样式
+### 样式
 
 按钮样式的单选组合。
 
-:::demo 只需要把`tc-radio`元素换成`tc-radio-button`元素即可，此外，Urpt 还提供了`size`属性。
+:::demo 把`tc-radio`元素换成`tc-radio-button`元素即可。
 ```html
 <template>
   <div>
@@ -92,81 +92,16 @@
     </tc-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <tc-radio-group v-model="radio2" size="medium">
-      <tc-radio-button label="上海" ></tc-radio-button>
-      <tc-radio-button label="北京"></tc-radio-button>
-      <tc-radio-button label="广州"></tc-radio-button>
-      <tc-radio-button label="深圳"></tc-radio-button>
-    </tc-radio-group>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-radio-group v-model="radio3" size="small">
-      <tc-radio-button label="上海"></tc-radio-button>
-      <tc-radio-button label="北京" disabled ></tc-radio-button>
-      <tc-radio-button label="广州"></tc-radio-button>
-      <tc-radio-button label="深圳"></tc-radio-button>
-    </tc-radio-group>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-radio-group v-model="radio4" disabled size="mini">
-      <tc-radio-button label="上海"></tc-radio-button>
-      <tc-radio-button label="北京"></tc-radio-button>
-      <tc-radio-button label="广州"></tc-radio-button>
-      <tc-radio-button label="深圳"></tc-radio-button>
-    </tc-radio-group>
-  </div>
-</template>
-
-<script>
-  export default {
-    data () {
-      return {
-        radio1: '上海',
-        radio2: '上海',
-        radio3: '上海',
-        radio4: '上海'
-      };
-    }
-  }
-</script>
-```
-:::
-
-### 带有边框
-
-:::demo 设置`border`属性可以渲染为带有边框的单选框。
-```html
-<template>
-  <div>
     <tc-radio v-model="radio1" label="1" border>备选项1</tc-radio>
     <tc-radio v-model="radio1" label="2" border>备选项2</tc-radio>
   </div>
-  <div style="margin-top: 20px">
-    <tc-radio v-model="radio2" label="1" border size="medium">备选项1</tc-radio>
-    <tc-radio v-model="radio2" label="2" border size="medium">备选项2</tc-radio>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-radio-group v-model="radio3" size="small">
-      <tc-radio label="1" border>备选项1</tc-radio>
-      <tc-radio label="2" border disabled>备选项2</tc-radio>
-    </tc-radio-group>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-radio-group v-model="radio4" size="mini" disabled>
-      <tc-radio label="1" border>备选项1</tc-radio>
-      <tc-radio label="2" border>备选项2</tc-radio>
-    </tc-radio-group>
-  </div>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        radio1: '1',
-        radio2: '1',
-        radio3: '1',
-        radio4: '1'
+        radio1: '上海'
       };
     }
   }

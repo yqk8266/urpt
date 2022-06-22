@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { hasClass, addClass, removeClass } from 'urpt-ui/src/utils/dom';
-import ElCheckbox from 'urpt-ui/packages/checkbox';
+import TcCheckbox from 'urpt-ui/packages/checkbox';
 import FilterPanel from './filter-panel.vue';
 import LayoutObserver from './layout-observer';
 import { mapStates } from './store/helper';
@@ -164,7 +164,7 @@ export default {
   },
 
   components: {
-    ElCheckbox
+    TcCheckbox
   },
 
   computed: {

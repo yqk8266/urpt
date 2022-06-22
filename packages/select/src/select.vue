@@ -369,7 +369,7 @@
 
       visible(val) {
         if (!val) {
-          this.broadcast('ElSelectDropdown', 'destroyPopper');
+          this.broadcast('TcSelectDropdown', 'destroyPopper');
           if (this.$refs.input) {
             this.$refs.input.blur();
           }
@@ -402,7 +402,7 @@
             }
           }
         } else {
-          this.broadcast('ElSelectDropdown', 'updatePopper');
+          this.broadcast('TcSelectDropdown', 'updatePopper');
           if (this.filterable) {
             this.query = this.remote ? '' : this.selectedLabel;
             this.handleQueryChange(this.query);
@@ -410,8 +410,8 @@
               this.$refs.input.focus();
             } else {
               if (!this.remote) {
-                this.broadcast('ElOption', 'queryChange', '');
-                this.broadcast('ElOptionGroup', 'queryChange');
+                this.broadcast('TcOption', 'queryChange', '');
+                this.broadcast('TcOptionGroup', 'queryChange');
               }
 
               if (this.selectedLabel) {
@@ -427,7 +427,7 @@
       options() {
         if (this.$isServer) return;
         this.$nextTick(() => {
-          this.broadcast('ElSelectDropdown', 'updatePopper');
+          this.broadcast('TcSelectDropdown', 'updatePopper');
         });
         if (this.multiple) {
           this.resetInputHeight();
@@ -469,7 +469,7 @@
         }
         this.previousQuery = val;
         this.$nextTick(() => {
-          if (this.visible) this.broadcast('ElSelectDropdown', 'updatePopper');
+          if (this.visible) this.broadcast('TcSelectDropdown', 'updatePopper');
         });
         this.hoverIndex = -1;
         if (this.multiple && this.filterable) {
@@ -485,11 +485,11 @@
           this.remoteMethod(val);
         } else if (typeof this.filterMethod === 'function') {
           this.filterMethod(val);
-          this.broadcast('ElOptionGroup', 'queryChange');
+          this.broadcast('TcOptionGroup', 'queryChange');
         } else {
           this.filteredOptionsCount = this.optionsCount;
-          this.broadcast('ElOption', 'queryChange', val);
-          this.broadcast('ElOptionGroup', 'queryChange');
+          this.broadcast('TcOption', 'queryChange', val);
+          this.broadcast('TcOptionGroup', 'queryChange');
         }
         if (this.defaultFirstOption && (this.filterable || this.remote) && this.filteredOptionsCount) {
           this.checkDefaultFirstOption();
@@ -663,7 +663,7 @@
               sizeInMap
             ) + 'px';
           if (this.visible && this.emptyText !== false) {
-            this.broadcast('ElSelectDropdown', 'updatePopper');
+            this.broadcast('TcSelectDropdown', 'updatePopper');
           }
         });
       },

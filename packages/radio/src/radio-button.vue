@@ -74,7 +74,7 @@
       _radioGroup() {
         let parent = this.$parent;
         while (parent) {
-          if (parent.$options.componentName !== 'ElRadioGroup') {
+          if (parent.$options.componentName !== 'TcRadioGroup') {
             parent = parent.$parent;
           } else {
             return parent;

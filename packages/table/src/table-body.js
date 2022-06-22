@@ -1,7 +1,7 @@
 import { arrayFindIndex } from 'urpt-ui/src/utils/util';
 import { getCell, getColumnByCell, getRowIdentity } from './util';
 import { getStyle, hasClass, removeClass, addClass } from 'urpt-ui/src/utils/dom';
-import ElCheckbox from 'urpt-ui/packages/checkbox';
+import TcCheckbox from 'urpt-ui/packages/checkbox';
 import ElTooltip from 'urpt-ui/packages/tooltip';
 import debounce from 'throttle-debounce/debounce';
 import LayoutObserver from './layout-observer';
@@ -14,7 +14,7 @@ export default {
   mixins: [LayoutObserver],
 
   components: {
-    ElCheckbox,
+    TcCheckbox,
     ElTooltip,
     TableRow
   },

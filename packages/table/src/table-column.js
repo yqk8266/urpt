@@ -1,6 +1,6 @@
 import { cellStarts, cellForced, defaultRenderCell, treeCellPrefix } from './config';
 import { mergeOptions, parseWidth, parseMinWidth, compose } from './util';
-import ElCheckbox from 'urpt-ui/packages/checkbox';
+import TcCheckbox from 'urpt-ui/packages/checkbox';
 
 let columnIdSeed = 1;
 
@@ -241,7 +241,7 @@ export default {
   },
 
   components: {
-    ElCheckbox
+    TcCheckbox
   },
 
   beforeCreate() {

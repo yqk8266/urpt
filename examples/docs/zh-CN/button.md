@@ -1,101 +1,53 @@
 ## Button 按钮
 常用的操作按钮。
 
-### 基础用法
+### 代码示例
 
-基础的按钮用法。
+基础组件按钮，按需使用。
 
-:::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
+:::demo 按钮的类型有默认按钮、主按钮、文字按钮、圆角按钮、以及4种颜色按钮
 
 ```html
 <tc-row>
-  <tc-button>默认按钮</tc-button>
-  <tc-button type="primary">主要按钮</tc-button>
-  <tc-button type="success">成功按钮</tc-button>
-  <tc-button type="info">信息按钮</tc-button>
-  <tc-button type="warning">警告按钮</tc-button>
-  <tc-button type="danger">危险按钮</tc-button>
-</tc-row>
-
-<tc-row>
-  <tc-button plain>朴素按钮</tc-button>
-  <tc-button type="primary" plain>主要按钮</tc-button>
-  <tc-button type="success" plain>成功按钮</tc-button>
-  <tc-button type="info" plain>信息按钮</tc-button>
-  <tc-button type="warning" plain>警告按钮</tc-button>
-  <tc-button type="danger" plain>危险按钮</tc-button>
-</tc-row>
-
-<tc-row>
-  <tc-button round>圆角按钮</tc-button>
-  <tc-button type="primary" round>主要按钮</tc-button>
-  <tc-button type="success" round>成功按钮</tc-button>
-  <tc-button type="info" round>信息按钮</tc-button>
-  <tc-button type="warning" round>警告按钮</tc-button>
-  <tc-button type="danger" round>危险按钮</tc-button>
-</tc-row>
-
-<tc-row>
-  <tc-button icon="el-icon-search" circle></tc-button>
-  <tc-button type="primary" icon="el-icon-edit" circle></tc-button>
-  <tc-button type="success" icon="el-icon-check" circle></tc-button>
-  <tc-button type="info" icon="el-icon-message" circle></tc-button>
-  <tc-button type="warning" icon="el-icon-star-off" circle></tc-button>
-  <tc-button type="danger" icon="el-icon-delete" circle></tc-button>
+  <tc-button>Default</tc-button>
+  <tc-button type="primary">Pramary</tc-button>
+  <tc-button type="text">Text</tc-button>
+  <tc-button round>Round</tc-button>
+  <tc-button type="info">Info</tc-button>
+  <tc-button type="success">Sussess</tc-button>
+  <tc-button type="warning">Warning</tc-button>
+  <tc-button type="danger">Danger</tc-button>
 </tc-row>
 ```
 :::
 
-### 禁用状态
+### 禁用
 
-按钮不可用状态。
+按钮禁用状态。
 
-:::demo 你可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
+:::demo 使用`disabled`属性来禁用按钮。
 
 ```html
 <tc-row>
-  <tc-button disabled>默认按钮</tc-button>
-  <tc-button type="primary" disabled>主要按钮</tc-button>
-  <tc-button type="success" disabled>成功按钮</tc-button>
-  <tc-button type="info" disabled>信息按钮</tc-button>
-  <tc-button type="warning" disabled>警告按钮</tc-button>
-  <tc-button type="danger" disabled>危险按钮</tc-button>
-</tc-row>
-
-<tc-row>
-  <tc-button plain disabled>朴素按钮</tc-button>
-  <tc-button type="primary" plain disabled>主要按钮</tc-button>
-  <tc-button type="success" plain disabled>成功按钮</tc-button>
-  <tc-button type="info" plain disabled>信息按钮</tc-button>
-  <tc-button type="warning" plain disabled>警告按钮</tc-button>
-  <tc-button type="danger" plain disabled>危险按钮</tc-button>
+  <tc-button disabled>Default</tc-button>
+  <tc-button type="primary" disabled>Primary</tc-button>
+  <tc-button type="success" disabled>Success</tc-button>
+  <tc-button type="info" disabled>Info</tc-button>
+  <tc-button type="warning" disabled>Warning</tc-button>
+  <tc-button type="danger" disabled>Danger</tc-button>
 </tc-row>
 ```
 :::
 
-### 文字按钮
-
-没有边框和背景色的按钮。
-
-:::demo
-```html
-<tc-button type="text">文字按钮</tc-button>
-<tc-button type="text" disabled>文字按钮</tc-button>
-```
-:::
-
-### 图标按钮
+### 图标
 
 带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
 
 :::demo 设置`icon`属性即可，icon 的列表可以参考 Urpt 的 icon 组件，也可以设置在文字右边的 icon ，只要使用`i`标签即可，可以使用自定义图标。
 
 ```html
-<tc-button type="primary" icon="el-icon-edit"></tc-button>
-<tc-button type="primary" icon="el-icon-share"></tc-button>
-<tc-button type="primary" icon="el-icon-delete"></tc-button>
-<tc-button type="primary" icon="el-icon-search">搜索</tc-button>
-<tc-button type="primary">上传<i class="el-icon-upload el-icon--right"></i></tc-button>
+<tc-button type="success" icon="el-icon-download">Download</tc-button>
+<tc-button type="success">Upload<i class="el-icon-upload el-icon--right"></i></tc-button>
 ```
 :::
 
@@ -111,8 +63,8 @@
   <tc-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></tc-button>
 </tc-button-group>
 <tc-button-group>
+  <tc-button type="primary" icon="el-icon-plus"></tc-button>
   <tc-button type="primary" icon="el-icon-edit"></tc-button>
-  <tc-button type="primary" icon="el-icon-share"></tc-button>
   <tc-button type="primary" icon="el-icon-delete"></tc-button>
 </tc-button-group>
 ```
@@ -137,16 +89,9 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 
 ```html
 <tc-row>
-  <tc-button>默认按钮</tc-button>
-  <tc-button size="medium">中等按钮</tc-button>
-  <tc-button size="small">小型按钮</tc-button>
-  <tc-button size="mini">超小按钮</tc-button>
-</tc-row>
-<tc-row>
-  <tc-button round>默认按钮</tc-button>
-  <tc-button size="medium" round>中等按钮</tc-button>
-  <tc-button size="small" round>小型按钮</tc-button>
-  <tc-button size="mini" round>超小按钮</tc-button>
+  <tc-button size="medium">medium</tc-button>
+  <tc-button size="small">small</tc-button>
+  <tc-button size="mini">mini</tc-button>
 </tc-row>
 ```
 :::
@@ -162,5 +107,4 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 | loading     | 是否加载中状态   | boolean    | — | false   |
 | disabled  | 是否禁用状态    | boolean   | —   | false   |
 | icon  | 图标类名 | string   |  —  |  —  |
-| autofocus  | 是否默认聚焦 | boolean   |  —  |  false  |
 | native-type | 原生 type 属性 | string | button / submit / reset | button |

@@ -1,7 +1,7 @@
 ## Checkbox 多选框
 一组备选项中进行多选
 
-### 基础用法
+### 代码示例
 
 单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。
 
@@ -10,7 +10,7 @@
 ```html
 <template>
   <!-- `checked` 为 true 或 false -->
-  <tc-checkbox v-model="checked">备选项</tc-checkbox>
+  <tc-checkbox v-model="checked">Default</tc-checkbox>
 </template>
 <script>
   export default {
@@ -24,7 +24,7 @@
 ```
 :::
 
-### 禁用状态
+### 禁用
 
 多选框不可用状态。
 
@@ -32,8 +32,8 @@
 
 ```html
 <template>
-  <tc-checkbox v-model="checked1" disabled>备选项1</tc-checkbox>
-  <tc-checkbox v-model="checked2" disabled>备选项</tc-checkbox>
+  <tc-checkbox v-model="checked1" disabled>Default</tc-checkbox>
+  <tc-checkbox v-model="checked2" disabled>Info</tc-checkbox>
 </template>
 <script>
   export default {
@@ -52,14 +52,14 @@
 
 适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。
 
-:::demo `checkbox-group`元素能把多个 checkbox 管理为一组，只需要在 Group 中使用`v-model`绑定`Array`类型的变量即可。 `tc-checkbox` 的 `label`属性是该 checkbox 对应的值，若该标签中无内容，则该属性也充当 checkbox 按钮后的介绍。`label`与数组中的元素值相对应，如果存在指定的值则为选中状态，否则为不选中。
+:::demo 在 Group 中使用`v-model`绑定`Array`类型的变量即可。 `tc-checkbox` 的 `label`属性是该 checkbox 对应的值，若该标签中无内容，则该属性也充当 checkbox 按钮后的介绍。`label`与数组中的元素值相对应，如果存在指定的值则为选中状态，否则为不选中。
 
 ```html
 <template>
   <tc-checkbox-group v-model="checkList">
-    <tc-checkbox label="复选框 A"></tc-checkbox>
-    <tc-checkbox label="复选框 B"></tc-checkbox>
-    <tc-checkbox label="复选框 C"></tc-checkbox>
+    <tc-checkbox label="A"></tc-checkbox>
+    <tc-checkbox label="B"></tc-checkbox>
+    <tc-checkbox label="C"></tc-checkbox>
     <tc-checkbox label="禁用" disabled></tc-checkbox>
     <tc-checkbox label="选中且禁用" disabled></tc-checkbox>
   </tc-checkbox-group>
@@ -69,7 +69,7 @@
   export default {
     data () {
       return {
-        checkList: ['选中且禁用','复选框 A']
+        checkList: ['选中且禁用','A']
       };
     }
   };
@@ -118,60 +118,16 @@
 ```
 :::
 
-### 可选项目数量的限制
-
-使用 `min` 和 `max` 属性能够限制可以被勾选的项目的数量。
-
-:::demo
-
-```html
-<template>
-  <tc-checkbox-group 
-    v-model="checkedCities"
-    :min="1"
-    :max="2">
-    <tc-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</tc-checkbox>
-  </tc-checkbox-group>
-</template>
-<script>
-  const cityOptions = ['上海', '北京', '广州', '深圳'];
-  export default {
-    data() {
-      return {
-        checkedCities: ['上海', '北京'],
-        cities: cityOptions
-      };
-    }
-  };
-</script>
-```
-
-:::
 
 ### 按钮样式
 
 按钮样式的多选组合。
 
-:::demo 只需要把`tc-checkbox`元素替换为`tc-checkbox-button`元素即可。此外，Urpt 还提供了`size`属性。
+:::demo 只需要把`tc-checkbox`元素替换为`tc-checkbox-button`元素即可。
 ```html
 <template>
   <div>
     <tc-checkbox-group v-model="checkboxGroup1">
-      <tc-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</tc-checkbox-button>
-    </tc-checkbox-group>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-checkbox-group v-model="checkboxGroup2" size="medium">
-      <tc-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</tc-checkbox-button>
-    </tc-checkbox-group>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-checkbox-group v-model="checkboxGroup3" size="small">
-      <tc-checkbox-button v-for="city in cities" :label="city" :disabled="city === '北京'" :key="city">{{city}}</tc-checkbox-button>
-    </tc-checkbox-group>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-checkbox-group v-model="checkboxGroup4" size="mini" disabled>
       <tc-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</tc-checkbox-button>
     </tc-checkbox-group>
   </div>
@@ -182,9 +138,6 @@
     data () {
       return {
         checkboxGroup1: ['上海'],
-        checkboxGroup2: ['上海'],
-        checkboxGroup3: ['上海'],
-        checkboxGroup4: ['上海'],
         cities: cityOptions
       };
     }
@@ -193,7 +146,7 @@
 ```
 :::
 
-### 带有边框
+### 边框
 
 :::demo 设置`border`属性可以渲染为带有边框的多选框。
 ```html
@@ -201,22 +154,6 @@
   <div>
     <tc-checkbox v-model="checked1" label="备选项1" border></tc-checkbox>
     <tc-checkbox v-model="checked2" label="备选项2" border></tc-checkbox>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-checkbox v-model="checked3" label="备选项1" border size="medium"></tc-checkbox>
-    <tc-checkbox v-model="checked4" label="备选项2" border size="medium"></tc-checkbox>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-checkbox-group v-model="checkboxGroup1" size="small">
-      <tc-checkbox label="备选项1" border></tc-checkbox>
-      <tc-checkbox label="备选项2" border disabled></tc-checkbox>
-    </tc-checkbox-group>
-  </div>
-  <div style="margin-top: 20px">
-    <tc-checkbox-group v-model="checkboxGroup2" size="mini" disabled>
-      <tc-checkbox label="备选项1" border></tc-checkbox>
-      <tc-checkbox label="备选项2" border></tc-checkbox>
-    </tc-checkbox-group>
   </div>
 </template>
 
@@ -262,8 +199,6 @@
 | value / v-model | 绑定值 | array | — | — |
 | size     | 多选框组尺寸，仅对按钮形式的 Checkbox 或带有边框的 Checkbox 有效   | string  | medium / small / mini  |    —     |
 | disabled  | 是否禁用    | boolean   | — | false   |
-| min     | 可被勾选的 checkbox 的最小数量   | number    |       —        |     —    |
-| max     | 可被勾选的 checkbox 的最大数量   | number    |       —        |     —    |
 | text-color  | 按钮形式的 Checkbox 激活时的文本颜色    | string   | — | #ffffff   |
 | fill  | 按钮形式的 Checkbox 激活时的填充色和边框色    | string   | — | #409EFF   |
 
