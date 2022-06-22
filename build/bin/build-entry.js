@@ -29,7 +29,7 @@ const install = function(Vue, opts = {}) {
 
   Vue.use(InfiniteScroll);
 
-  Vue.prototype.$ELEMENT = {
+  Vue.prototype.$URPT = {
     size: opts.size || 'small',
     zIndex: opts.zIndex || 2000
   };

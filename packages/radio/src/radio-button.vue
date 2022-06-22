@@ -94,7 +94,7 @@
         return (this.elFormItem || {}).elFormItemSize;
       },
       size() {
-        return this._radioGroup.radioGroupSize || this._elFormItemSize || (this.$ELEMENT || {}).size;
+        return this._radioGroup.radioGroupSize || this._elFormItemSize || (this.$URPT || {}).size;
       },
       isDisabled() {
         return this.disabled || this._radioGroup.disabled || (this.elForm || {}).disabled;

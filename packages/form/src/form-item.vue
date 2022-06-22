@@ -172,7 +172,7 @@
         return this.size || this._formSize;
       },
       sizeClass() {
-        return this.elFormItemSize || (this.$ELEMENT || {}).size;
+        return this.elFormItemSize || (this.$URPT || {}).size;
       }
     },
     data() {

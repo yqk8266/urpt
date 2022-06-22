@@ -1,15 +1,5 @@
 ## Input 输入框
 
-通过鼠标或键盘输入字符
-
-:::warning
-Input 为受控组件，它**总会显示 Vue 绑定值**。
-
-通常情况下，应当处理 `input` 事件，并更新组件的绑定值（或使用`v-model`）。否则，输入框内显示的值将不会改变。
-
-不支持 `v-model` 修饰符。
-:::
-
 ### 代码示例
 
 :::demo
@@ -89,54 +79,6 @@ export default {
       }
     }
   }
-</script>
-```
-:::
-
-### 带 icon 
-
-带有图标标记输入类型
-
-:::demo 可以通过 `prefix-icon` 和 `suffix-icon` 属性在 input 组件首部和尾部增加显示图标，也可以通过 slot 来放置图标。
-```html
-<div class="demo-input-suffix">
-  属性方式：
-  <tc-input
-    placeholder="请选择日期"
-    suffix-icon="el-icon-date"
-    v-model="input1">
-  </tc-input>
-  <tc-input
-    placeholder="请输入内容"
-    prefix-icon="el-icon-search"
-    v-model="input2">
-  </tc-input>
-</div>
-<div class="demo-input-suffix">
-  slot 方式：
-  <tc-input
-    placeholder="请选择日期"
-    v-model="input3">
-    <i slot="suffix" class="el-input__icon el-icon-date"></i>
-  </tc-input>
-  <tc-input
-    placeholder="请输入内容"
-    v-model="input4">
-    <i slot="prefix" class="el-input__icon el-icon-search"></i>
-  </tc-input>
-</div>
-
-<script>
-export default {
-  data() {
-    return {
-      input1: '',
-      input2: '',
-      input3: '',
-      input4: ''
-    }
-  }
-}
 </script>
 ```
 :::
