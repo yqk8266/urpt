@@ -20,32 +20,32 @@
           "groupName": "Basic",
           "list": [
             {
-              "path": "/button",
-              "title": "Button 按钮"
-            },
-            {
-              "path": "/radio",
-              "title": "Radio 单选框"
-            },
-            {
-              "path": "/checkbox",
-              "title": "Checkbox 多选框"
-            },
-            {
               "path": "/input",
-              "title": "Input 输入框"
+              "title": "Input"
             },
             {
               "path": "/input-number",
-              "title": "InputNumber 计数器"
+              "title": "InputNumber"
+            },
+            {
+              "path": "/button",
+              "title": "Button"
+            },
+            {
+              "path": "/radio",
+              "title": "Radio"
+            },
+            {
+              "path": "/checkbox",
+              "title": "Checkbox"
             },
             {
               "path": "/select",
-              "title": "Select 选择器"
+              "title": "Select"
             },
             {
               "path": "/table",
-              "title": "Table 表格"
+              "title": "Table"
             }
           ]
         }

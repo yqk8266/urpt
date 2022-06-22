@@ -11,7 +11,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const config = require('./config');
 
 const isProd = process.env.NODE_ENV === 'production';
-const isPlay = !!process.env.PLAY_ENV;
+// const isPlay =  !!process.env.PLAY_ENV;
+const isPlay =  true;
 
 const webpackConfig = {
   mode: process.env.NODE_ENV,

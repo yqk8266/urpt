@@ -71,7 +71,7 @@ const install = function(Vue, opts = {}) {
   Vue.use(InfiniteScroll);
 
   Vue.prototype.$ELEMENT = {
-    size: opts.size || 'small',
+    size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
 };
