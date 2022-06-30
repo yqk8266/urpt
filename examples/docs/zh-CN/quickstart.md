@@ -1,15 +1,12 @@
 ## 快速上手
 
-本节将介绍如何在项目中使用 Urpt。
+### 如何引入 Urpt
 
-
-### 引入 Urpt
-
-你可以引入整个 Urpt，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 Urpt。
+可以引入整个 Urpt，也可以按需引入。
 
 #### 完整引入
 
-在 main.js 中写入以下内容：
+在 main.js(入口文件) 中写入以下内容：
 
 ```javascript
 import Vue from 'vue';
@@ -25,11 +22,9 @@ new Vue({
 });
 ```
 
-以上代码便完成了 Urpt 的引入。需要注意的是，样式文件需要单独引入。
-
 #### 按需引入
 
-借助 [babel-plugin-component](https://github.com/QingWei-Li/babel-plugin-component)，我们可以只引入需要的组件，以达到减小项目体积的目的。
+借助 [babel-plugin-component](https://github.com/QingWei-Li/babel-plugin-component)，只引入需要的组件。
 
 首先，安装 babel-plugin-component：
 
@@ -54,7 +49,7 @@ npm install babel-plugin-component -D
 }
 ```
 
-接下来，如果你只希望引入部分组件，比如 Button 和 Select，那么需要在 main.js 中写入以下内容：
+使用的时候只需要在main.js 中写入以下内容：
 
 ```javascript
 import Vue from 'vue';
