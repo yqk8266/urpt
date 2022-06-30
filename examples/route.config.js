@@ -96,7 +96,7 @@ route.push({
   component: require('./play/index.vue')
 });
 
-let defaultPath = 'zh-CN';
+let defaultPath = 'zh-CN/component/installation';
 
 route = route.concat([{
   path: '/',
