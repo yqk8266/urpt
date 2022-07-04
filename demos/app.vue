@@ -10,12 +10,12 @@
 
 <script>
   import { use } from 'main/locale';
-  import zhLocale from 'main/locale/lang/zh-CN';
+  import zhLocale from 'main/locale/lang/urpt';
 
-  const lang = location.hash.replace('#', '').split('/')[1] || 'zh-CN';
+  const lang = location.hash.replace('#', '').split('/')[1] || 'urpt';
   const localize = lang => {
     switch (lang) {
-      case 'zh-CN':
+      case 'urpt':
         use(zhLocale);
         break;
       default:
@@ -28,7 +28,7 @@
 
     computed: {
       lang() {
-        return this.$route.path.split('/')[1] || 'zh-CN';
+        return this.$route.path.split('/')[1] || 'urpt';
       },
       isComponent() {
         return /^component-/.test(this.$route.name || '');
@@ -37,7 +37,7 @@
 
     watch: {
       lang(val) {
-        if (val === 'zh-CN') {
+        if (val === 'urpt') {
           // this.suggestJump();
         }
         localize(val);
@@ -57,7 +57,7 @@
 
     mounted() {
       localize(this.lang);
-      if (this.lang === 'zh-CN') {
+      if (this.lang === 'urpt') {
         this.suggestJump();
       }
     }

@@ -159,7 +159,7 @@
 
     computed: {
       lang() {
-        return this.$route.path.split('/')[1] || 'zh-CN';
+        return this.$route.path.split('/')[1] || 'urpt';
       },
 
       langConfig() {
@@ -167,7 +167,7 @@
       },
 
       gitterLink() {
-        return this.lang === 'zh-CN' ? 'https://gitter.im/ElemeFE/urpt' : 'https://gitter.im/urpt-en/Lobby';
+        return this.lang === 'urpt' ? 'https://gitter.im/ElemeFE/urpt' : 'https://gitter.im/urpt-en/Lobby';
       }
     }
   };

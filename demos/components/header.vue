@@ -397,7 +397,7 @@
         verDropdownVisible: true,
         langDropdownVisible: true,
         langs: {
-          'zh-CN': '中文',
+          'urpt': '中文',
           'en-US': 'English',
           'es': 'Español',
           'fr-FR': 'Français'
@@ -414,7 +414,7 @@
 
     computed: {
       lang() {
-        return this.$route.path.split('/')[1] || 'zh-CN';
+        return this.$route.path.split('/')[1] || 'urpt';
       },
       displayedLang() {
         return this.langs[this.lang] || '中文';

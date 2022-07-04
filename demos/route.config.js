@@ -2,10 +2,10 @@ import navConfig from './nav.config';
 import langs from './i18n/route';
 
 const LOAD_MAP = {
-  'zh-CN': name => {
+  'urpt': name => {
     return r => require.ensure([], () =>
-      r(require(`./pages/zh-CN/${name}.vue`)),
-    'zh-CN');
+      r(require(`./pages/urpt/${name}.vue`)),
+    'urpt');
   }
 };
 
@@ -14,10 +14,10 @@ const load = function(lang, path) {
 };
 
 const LOAD_DOCS_MAP = {
-  'zh-CN': path => {
+  'urpt': path => {
     return r => require.ensure([], () =>
-      r(require(`./docs/zh-CN${path}.md`)),
-    'zh-CN');
+      r(require(`./docs/urpt${path}.md`)),
+    'urpt');
   }
 };
 
@@ -96,7 +96,7 @@ route.push({
   component: require('./play/index.vue')
 });
 
-let defaultPath = 'zh-CN/component/installation';
+let defaultPath = 'urpt/component/installation';
 
 route = route.concat([{
   path: '/',

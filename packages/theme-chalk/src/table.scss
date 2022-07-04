@@ -81,7 +81,7 @@
   }
 
   @include e(append-wrapper) {
-    // 避免外边距重合 https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+    // 避免外边距重合 https://developer.mozilla.org/urpt/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
     overflow: hidden;
   }
 

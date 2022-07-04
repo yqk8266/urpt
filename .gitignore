@@ -13,7 +13,7 @@ lib
 .vscode
 demos/urpt-ui
 demos/pages/en-US
-demos/pages/zh-CN
+demos/pages/urpt
 demos/pages/es
 demos/pages/fr-FR
 fe.urpt/urpt-ui

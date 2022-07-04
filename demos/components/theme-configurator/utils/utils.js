@@ -38,7 +38,7 @@ export const getStyleDisplayValue = (displayValue, global) => {
 };
 
 const getLang = () => {
-  return location.hash.replace('#', '').split('/')[1] || 'zh-CN';
+  return location.hash.replace('#', '').split('/')[1] || 'urpt';
 };
 
 const getNameFromI18N = (name) => {

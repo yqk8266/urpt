@@ -124,7 +124,7 @@
         query: '',
         isEmpty: false,
         langs: {
-          'zh-CN': {
+          'urpt': {
             search: '搜索文档',
             empty: '无匹配结果',
             index: 'zh'
