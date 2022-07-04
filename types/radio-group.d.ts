@@ -3,7 +3,7 @@ import { UrptUiComponent } from './component'
 export type RadioGroupSize = 'large' | 'small'
 
 /** Radio Group Component */
-export declare class ElRadioGroup extends UrptUiComponent {
+export declare class TcRadioGroup extends UrptUiComponent {
   /** The size of radio buttons */
   size: RadioGroupSize
 

@@ -35,7 +35,7 @@ exports.externals = externals;
 exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../packages'),
-  examples: path.resolve(__dirname, '../demos'),
+  demos: path.resolve(__dirname, '../demos'),
   'urpt-ui': path.resolve(__dirname, '../')
 };
 

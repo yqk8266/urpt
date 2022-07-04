@@ -11,11 +11,11 @@ lerna-debug.log.*
 lib
 .idea
 .vscode
-examples/urpt-ui
-examples/pages/en-US
-examples/pages/zh-CN
-examples/pages/es
-examples/pages/fr-FR
+demos/urpt-ui
+demos/pages/en-US
+demos/pages/zh-CN
+demos/pages/es
+demos/pages/fr-FR
 fe.urpt/urpt-ui
 .npmrc
 coverage

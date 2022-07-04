@@ -107,7 +107,7 @@
     methods: {
       handleChange() {
         this.$nextTick(() => {
-          this.dispatch('ElRadioGroup', 'handleChange', this.value);
+          this.dispatch('TcRadioGroup', 'handleChange', this.value);
         });
       }
     }

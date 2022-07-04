@@ -49,7 +49,7 @@
   import Clickoutside from 'urpt-ui/src/utils/clickoutside';
   import Dropdown from './dropdown';
   import TcCheckbox from 'urpt-ui/packages/checkbox';
-  import ElCheckboxGroup from 'urpt-ui/packages/checkbox-group';
+  import TcCheckboxGroup from 'urpt-ui/packages/checkbox-group';
   import ElScrollbar from 'urpt-ui/packages/scrollbar';
 
   export default {
@@ -63,7 +63,7 @@
 
     components: {
       TcCheckbox,
-      ElCheckboxGroup,
+      TcCheckboxGroup,
       ElScrollbar
     },
 

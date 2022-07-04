@@ -15,7 +15,7 @@ import { ElCarouselItem } from './carousel-item'
 import { ElCascader } from './cascader'
 import { TcCheckbox } from './checkbox'
 import { ElCheckboxButton } from './checkbox-button'
-import { ElCheckboxGroup } from './checkbox-group'
+import { TcCheckboxGroup } from './checkbox-group'
 import { TcCol } from './col'
 import { ElCollapse } from './collapse'
 import { ElCollapseItem } from './collapse-item'
@@ -48,7 +48,7 @@ import { ElProgress } from './progress'
 import { ElRate } from './rate'
 import { TcRadio } from './radio'
 import { ElRadioButton } from './radio-button'
-import { ElRadioGroup } from './radio-group'
+import { TcRadioGroup } from './radio-group'
 import { TcRow } from './row'
 import { TcSelect } from './select'
 import { ElSlider } from './slider'
@@ -171,7 +171,7 @@ export class Checkbox extends TcCheckbox {}
 export class CheckboxButton extends ElCheckboxButton {}
 
 /** Checkbox Group Component */
-export class CheckboxGroup extends ElCheckboxGroup {}
+export class CheckboxGroup extends TcCheckboxGroup {}
 
 /** Colunm Layout Component */
 export class Col extends TcCol {}
@@ -258,7 +258,7 @@ export class Radio extends TcRadio {}
 export class RadioButton extends ElRadioButton {}
 
 /** Radio Group Component */
-export class RadioGroup extends ElRadioGroup {}
+export class RadioGroup extends TcRadioGroup {}
 
 /** Row Layout Component */
 export class Row extends TcRow {}

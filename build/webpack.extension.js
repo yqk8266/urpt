@@ -15,8 +15,8 @@ demoConfig.output = {
 };
 demoConfig.plugins = [
   new CopyWebpackPlugin([
-    { from: 'examples/extension/src/manifest.json' },
-    { from: 'examples/extension/src/icon.png' }
+    { from: 'demos/extension/src/manifest.json' },
+    { from: 'demos/extension/src/icon.png' }
   ]),
   new VueLoaderPlugin(),
   new ProgressBarPlugin(),
