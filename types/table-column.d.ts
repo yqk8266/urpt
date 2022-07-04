@@ -1,5 +1,5 @@
 import { CreateElement, VNode } from 'vue'
-import { ElementUIComponent, ElementUIHorizontalAlignment } from './component'
+import { UrptUiComponent, ElementUIHorizontalAlignment } from './component'
 import { PopoverPlacement } from './popover'
 
 export type TableColumnType = 'default' | 'selection' | 'index' | 'expand'
@@ -39,7 +39,7 @@ export interface TableColumnFilter {
 }
 
 /** TableColumn Component */
-export declare class ElTableColumn extends ElementUIComponent {
+export declare class ElTableColumn extends UrptUiComponent {
   /** Type of the column. If set to `selection`, the column will display checkbox. If set to `index`, the column will display index of the row (staring from 1). If set to `expand`, the column will display expand icon. */
   type: TableColumnType
 

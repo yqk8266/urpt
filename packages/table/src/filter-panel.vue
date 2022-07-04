@@ -48,7 +48,7 @@
   import Locale from 'urpt-ui/src/mixins/locale';
   import Clickoutside from 'urpt-ui/src/utils/clickoutside';
   import Dropdown from './dropdown';
-  import ElCheckbox from 'urpt-ui/packages/checkbox';
+  import TcCheckbox from 'urpt-ui/packages/checkbox';
   import ElCheckboxGroup from 'urpt-ui/packages/checkbox-group';
   import ElScrollbar from 'urpt-ui/packages/scrollbar';
 
@@ -62,7 +62,7 @@
     },
 
     components: {
-      ElCheckbox,
+      TcCheckbox,
       ElCheckboxGroup,
       ElScrollbar
     },

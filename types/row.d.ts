@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Horizontal alignment of flex layout */
 export type HorizontalAlignment = 'start' | 'end' | 'center' | 'space-around' | 'space-between'
@@ -7,7 +7,7 @@ export type HorizontalAlignment = 'start' | 'end' | 'center' | 'space-around' | 
 export type VertialAlignment = 'top' | 'middle' | 'bottom'
 
 /** Row Layout Component */
-export declare class ElRow extends ElementUIComponent {
+export declare class TcRow extends UrptUiComponent {
   /** Grid spacing */
   gutter: number
 

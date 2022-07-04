@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Container Component */
-export declare class ElContainer extends ElementUIComponent {
+export declare class ElContainer extends UrptUiComponent {
   /** Layout direction for child elements */
   direction: 'horizontal' | 'vertical'
 }

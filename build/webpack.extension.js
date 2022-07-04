@@ -6,11 +6,11 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 demoConfig.entry = {
-  background: path.join(process.cwd(), './examples/extension/src/background'),
-  entry: path.join(process.cwd(), './examples/extension/src/entry')
+  background: path.join(process.cwd(), './demos/extension/src/background'),
+  entry: path.join(process.cwd(), './demos/extension/src/entry')
 };
 demoConfig.output = {
-  path: path.join(process.cwd(), './examples/extension/dist'),
+  path: path.join(process.cwd(), './demos/extension/dist'),
   filename: '[name].js'
 };
 demoConfig.plugins = [

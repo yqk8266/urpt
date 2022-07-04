@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Badge Component */
-export declare class ElBadge extends ElementUIComponent {
+export declare class ElBadge extends UrptUiComponent {
   /** Display value */
   value: string | number
 

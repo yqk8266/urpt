@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Backtop Component */
-export declare class ElBacktop extends ElementUIComponent {
+export declare class ElBacktop extends UrptUiComponent {
   /** Backtop target */
   target: string
   

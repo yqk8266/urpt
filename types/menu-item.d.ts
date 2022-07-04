@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Menu Item Component */
-export declare class ElMenuItem extends ElementUIComponent {
+export declare class ElMenuItem extends UrptUiComponent {
   /** Unique identification */
   index: string
 

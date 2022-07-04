@@ -1,8 +1,8 @@
-import ElButton from './src/button';
+import TcButton from './src/button';
 
 /* istanbul ignore next */
-ElButton.install = function(Vue) {
-  Vue.component(ElButton.name, ElButton);
+TcButton.install = function(Vue) {
+  Vue.component(TcButton.name, TcButton);
 };
 
-export default ElButton;
+export default TcButton;

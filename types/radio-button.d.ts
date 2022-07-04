@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Radio Button Component */
-export declare class ElRadioButton extends ElementUIComponent {
+export declare class ElRadioButton extends UrptUiComponent {
   /** The form input value */
   value: string
 

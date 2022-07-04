@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 import { VNode } from 'vue'
 
 interface ElSkeletonSlots {
@@ -12,7 +12,7 @@ interface ElSkeletonSlots {
 }
 
 /** When loading data, and you need a rich experience for visual and interactions for your end users */
-export declare class ElSkeleton extends ElementUIComponent {
+export declare class ElSkeleton extends UrptUiComponent {
   /** whether showing the animation; default: false */
   animated: boolean
 

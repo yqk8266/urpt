@@ -1,10 +1,10 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Button type */
 export type LinkType = 'primary' | 'success' | 'warning' | 'danger' | 'info' 
 
 /** Link Component */
-export declare class ElLink extends ElementUIComponent {
+export declare class ElLink extends UrptUiComponent {
   /** Link type */
   type: LinkType
   

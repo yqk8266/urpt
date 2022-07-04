@@ -1,5 +1,5 @@
 import { CreateElement, VNode } from 'vue';
-import { ElementUIComponent } from './component';
+import { UrptUiComponent } from './component';
 
 export interface TreeData {
   id?: any;
@@ -45,7 +45,7 @@ export interface TreeStore<K, D> {
 }
 
 /** Tree Component */
-export declare class ElTree<K, D extends TreeData> extends ElementUIComponent {
+export declare class ElTree<K, D extends TreeData> extends UrptUiComponent {
   /** TreeStore */
   store: TreeStore<K, D>;
 

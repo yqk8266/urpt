@@ -1,4 +1,4 @@
-import { ElementUIComponent, ElementUIComponentSize } from './component'
+import { UrptUiComponent, UrptUiComponentSize } from './component'
 
 /** Button type */
 export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text'
@@ -7,9 +7,9 @@ export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info' |
 export type ButtonNativeType = 'button' | 'submit' | 'reset' | 'menu'
 
 /** Button Component */
-export declare class ElButton extends ElementUIComponent {
+export declare class TcButton extends UrptUiComponent {
   /** Button size */
-  size: ElementUIComponentSize
+  size: UrptUiComponentSize
 
   /** Button type */
   type: ButtonType

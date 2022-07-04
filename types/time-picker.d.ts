@@ -1,4 +1,4 @@
-import { ElementUIComponent, ElementUIComponentSize, ElementUIHorizontalAlignment } from './component'
+import { UrptUiComponent, UrptUiComponentSize, ElementUIHorizontalAlignment } from './component'
 
 export interface TimePickerOptions {
   /**
@@ -13,7 +13,7 @@ export interface TimePickerOptions {
 }
 
 /** TimePicker Component */
-export declare class ElTimePicker extends ElementUIComponent {
+export declare class ElTimePicker extends UrptUiComponent {
   /** Whether DatePicker is read only */
   readonly: boolean
 
@@ -27,7 +27,7 @@ export declare class ElTimePicker extends ElementUIComponent {
   clearable: boolean
 
   /** Size of Input */
-  size: ElementUIComponentSize
+  size: UrptUiComponentSize
 
   /** Placeholder */
   placeholder: string

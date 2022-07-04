@@ -1,5 +1,5 @@
 import { VNode } from 'vue'
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 export type ObjectFit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
 
@@ -14,7 +14,7 @@ export interface ImageSlots {
 }
 
 /** Image Component */
-export declare class ElImage extends ElementUIComponent {
+export declare class ElImage extends UrptUiComponent {
   /** Image source */
   src: string
 

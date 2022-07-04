@@ -38,12 +38,12 @@ export default ${ComponentName};`
 
 <script>
 export default {
-  name: 'El${ComponentName}'
+  name: 'Tc${ComponentName}'
 };
 </script>`
   },
   {
-    filename: path.join('../../examples/docs/zh-CN', `${componentname}.md`),
+    filename: path.join('../../demos/docs/zh-CN', `${componentname}.md`),
     content: `## ${ComponentName} ${chineseName}`
   },
   {
@@ -56,10 +56,10 @@ export default {
   },
   {
     filename: path.join('../../types', `${componentname}.d.ts`),
-    content: `import { ElementUIComponent } from './component'
+    content: `import { UrptUiComponent } from './component'
 
 /** ${ComponentName} Component */
-export declare class El${ComponentName} extends ElementUIComponent {
+export declare class Tc${ComponentName} extends UrptUiComponent {
 }`
   }
 ];
@@ -87,10 +87,10 @@ const elementTsPath = path.join(__dirname, '../../types/urpt-ui.d.ts');
 
 let elementTsText = `${fs.readFileSync(elementTsPath)}
 /** ${ComponentName} Component */
-export class ${ComponentName} extends El${ComponentName} {}`;
+export class ${ComponentName} extends Tc${ComponentName} {}`;
 
 const index = elementTsText.indexOf('export') - 1;
-const importString = `import { El${ComponentName} } from './${componentname}'`;
+const importString = `import { Tc${ComponentName} } from './${componentname}'`;
 
 elementTsText = elementTsText.slice(0, index) + importString + '\n' + elementTsText.slice(index);
 
@@ -106,7 +106,7 @@ Files.forEach(file => {
 });
 
 // 添加到 nav.config.json
-const navConfigFile = require('../../examples/nav.config.json');
+const navConfigFile = require('../../demos/nav.config.json');
 
 Object.keys(navConfigFile).forEach(lang => {
   let groups = navConfigFile[lang][3].groups;
@@ -118,7 +118,7 @@ Object.keys(navConfigFile).forEach(lang => {
   });
 });
 
-fileSave(path.join(__dirname, '../../examples/nav.config.json'))
+fileSave(path.join(__dirname, '../../demos/nav.config.json'))
   .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
   .end('\n');
 

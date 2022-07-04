@@ -53,8 +53,8 @@
   import ColorList from './color-list';
   import Popper from 'urpt-ui/src/utils/vue-popper';
   import Locale from 'urpt-ui/src/mixins/locale';
-  import ElInput from 'urpt-ui/packages/input';
-  import ElButton from 'urpt-ui/packages/button';
+  import TcInput from 'urpt-ui/packages/input';
+  import TcButton from 'urpt-ui/packages/button';
 
   export default {
     name: 'el-color-picker-dropdown',
@@ -65,8 +65,8 @@
       SvPanel,
       HueSlider,
       AlphaSlider,
-      ElInput,
-      ElButton,
+      TcInput,
+      TcButton,
       Predefine,
       ColorList
     },

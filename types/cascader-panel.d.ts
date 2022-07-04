@@ -1,5 +1,5 @@
 import { VNode, CreateElement } from 'vue';
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Trigger mode of expanding current item */
 export type ExpandTrigger = 'click' | 'hover'
@@ -52,7 +52,7 @@ export interface CascaderPanelSlots {
 }
 
 /** CascaderPanel Component */
-export declare class ElCascaderPanel<V = any, D = CascaderOption> extends ElementUIComponent {
+export declare class ElCascaderPanel<V = any, D = CascaderOption> extends UrptUiComponent {
   /** Selected value */
   value: V | V[]
 

@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 import { VNode } from 'vue'
 
 interface ElDescriptionsSlots {
@@ -12,7 +12,7 @@ interface ElDescriptionsSlots {
 }
 
 /** Display multiple fields in list form. **/
-export declare class ElDescriptions extends ElementUIComponent {
+export declare class ElDescriptions extends UrptUiComponent {
 
   /* with or without border */
   border: boolean

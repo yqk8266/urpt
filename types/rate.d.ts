@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 interface Option {
   value: string,
@@ -13,7 +13,7 @@ export type RateColors = Options
 export type RateIconClasses = Options
 
 /** Rate Component */
-export declare class ElRate extends ElementUIComponent {
+export declare class ElRate extends UrptUiComponent {
   /** Max rating score */
   max: number
 

@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Dropdown Select Option Group Component */
-export declare class ElOptionGroup extends ElementUIComponent {
+export declare class ElOptionGroup extends UrptUiComponent {
   /** Name of the group */
   label: string
 

@@ -1,7 +1,7 @@
-import { ElementUIComponent, ElementUIComponentSize } from './component'
+import { UrptUiComponent, UrptUiComponentSize } from './component'
 
 /** Checkbox Component */
-export declare class ElCheckbox extends ElementUIComponent {
+export declare class TcCheckbox extends UrptUiComponent {
   /** The form input value */
   value: string | string[]
 
@@ -21,7 +21,7 @@ export declare class ElCheckbox extends ElementUIComponent {
   border: boolean
 
   /** Size of the Checkbox, only works when border is true */
-  size: ElementUIComponentSize
+  size: UrptUiComponentSize
 
   /** If the checkbox is disabled */
   disabled: boolean

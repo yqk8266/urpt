@@ -1,9 +1,9 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 export type InputNumberSize = 'large' | 'small'
 
 /** InputNumber Component */
-export declare class ElInputNumber extends ElementUIComponent {
+export declare class TcInputNumber extends UrptUiComponent {
   /** Binding value */
   value: number
 

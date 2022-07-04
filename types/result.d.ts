@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 import { VNode } from 'vue'
 
 interface ElResultSlots {
@@ -18,7 +18,7 @@ interface ElResultSlots {
 }
 
 /** Used to give feedback on the result of user's operation or access exception. **/
-export declare class ElResult extends ElementUIComponent {
+export declare class ElResult extends UrptUiComponent {
 
   /* title */
   title: string

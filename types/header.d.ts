@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Header Component */
-export declare class ElHeader extends ElementUIComponent {
+export declare class TcHeader extends UrptUiComponent {
   /** Height of the header */
   height: string
 }

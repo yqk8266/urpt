@@ -10,8 +10,8 @@ SUB_FOLDER='2.15'
 mkdir -p $SUB_FOLDER
 rm -rf *.js *.css *.map static
 rm -rf $SUB_FOLDER/**
-cp -rf ../../examples/urpt-ui/** .
-cp -rf ../../examples/urpt-ui/** $SUB_FOLDER/
+cp -rf ../../demos/urpt-ui/** .
+cp -rf ../../demos/urpt-ui/** $SUB_FOLDER/
 cd ../..
 
 # deploy domestic site

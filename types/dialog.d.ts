@@ -1,5 +1,5 @@
 import { VNode } from 'vue'
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 export interface DialogSlots {
   /** Content of the Dialog */
@@ -15,7 +15,7 @@ export interface DialogSlots {
 }
 
 /** Informs users while preserving the current page state */
-export declare class ElDialog extends ElementUIComponent {
+export declare class ElDialog extends UrptUiComponent {
   /** Title of Dialog */
   title: string
 

@@ -1,10 +1,10 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 export type ProgressType = 'line' | 'circle'
 export type ProgressStatus = 'success' | 'exception'
 
 /** Progress Component */
-export declare class ElProgress extends ElementUIComponent {
+export declare class ElProgress extends UrptUiComponent {
   /** Percentage, required */
   percentage: number
 

@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Main Component */
-export declare class ElMain extends ElementUIComponent {}
+export declare class ElMain extends UrptUiComponent {}

@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 export type ListType = 'text' | 'picture' | 'picture-card'
 export type FileUploadStatus = 'ready' | 'uploading' | 'success' | 'fail'
@@ -40,7 +40,7 @@ export interface HttpRequestOptions {
 }
 
 /** Upload Component */
-export declare class ElUpload extends ElementUIComponent {
+export declare class ElUpload extends UrptUiComponent {
   /** Request URL (required) */
   action: string
 

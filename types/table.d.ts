@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 import { TooltipEffect } from './tooltip'
 
 export type SortOrder = 'ascending' | 'descending'
@@ -38,7 +38,7 @@ export interface treeNode {
 }
 
 /** Table Component */
-export declare class ElTable extends ElementUIComponent {
+export declare class TcTable extends UrptUiComponent {
   /** Table data */
   data: object[]
 

@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 import { VNode } from 'vue'
 
 interface ElDescriptionsItemSlots {
@@ -12,7 +12,7 @@ interface ElDescriptionsItemSlots {
 }
 
 /** description item. **/
-export declare class ElDescriptionsItem extends ElementUIComponent {
+export declare class ElDescriptionsItem extends UrptUiComponent {
 
   /* label text */
   label: string

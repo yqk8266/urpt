@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 /** Pagination Component */
-export declare class ElPagination extends ElementUIComponent {
+export declare class ElPagination extends UrptUiComponent {
   /** Whether to use small pagination */
   small: boolean
 

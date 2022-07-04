@@ -1,8 +1,8 @@
-import ElTable from './src/table';
+import TcTable from './src/table';
 
 /* istanbul ignore next */
-ElTable.install = function(Vue) {
-  Vue.component(ElTable.name, ElTable);
+TcTable.install = function(Vue) {
+  Vue.component(TcTable.name, TcTable);
 };
 
-export default ElTable;
+export default TcTable;

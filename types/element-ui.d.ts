@@ -1,22 +1,22 @@
 import Vue, { PluginObject } from 'vue'
-import { ElementUIComponent, ElementUIComponentSize, ElementUIHorizontalAlignment } from './component'
+import { UrptUiComponent, UrptUiComponentSize, ElementUIHorizontalAlignment } from './component'
 
-import { ElAlert } from './alert'
+import { TcAlert } from './alert'
 import { ElAside } from './aside'
 import { ElAutocomplete } from './autocomplete'
 import { ElBadge } from './badge'
 import { ElBreadcrumb } from './breadcrumb'
 import { ElBreadcrumbItem } from './breadcrumb-item'
-import { ElButton } from './button'
+import { TcButton } from './button'
 import { ElButtonGroup } from './button-group'
 import { ElCard } from './card'
 import { ElCarousel } from './carousel'
 import { ElCarouselItem } from './carousel-item'
 import { ElCascader } from './cascader'
-import { ElCheckbox } from './checkbox'
+import { TcCheckbox } from './checkbox'
 import { ElCheckboxButton } from './checkbox-button'
 import { ElCheckboxGroup } from './checkbox-group'
-import { ElCol } from './col'
+import { TcCol } from './col'
 import { ElCollapse } from './collapse'
 import { ElCollapseItem } from './collapse-item'
 import { ElColorPicker } from './color-picker'
@@ -29,9 +29,9 @@ import { ElDropdownMenu } from './dropdown-menu'
 import { ElFooter } from './footer'
 import { ElForm } from './form'
 import { ElFormItem } from './form-item'
-import { ElHeader } from './header'
-import { ElInput } from './input'
-import { ElInputNumber } from './input-number'
+import { TcHeader } from './header'
+import { TcInput } from './input'
+import { TcInputNumber } from './input-number'
 import { ElLoading } from './loading'
 import { ElMain } from './main'
 import { ElMenu } from './menu'
@@ -46,17 +46,17 @@ import { ElPagination } from './pagination'
 import { ElPopover } from './popover'
 import { ElProgress } from './progress'
 import { ElRate } from './rate'
-import { ElRadio } from './radio'
+import { TcRadio } from './radio'
 import { ElRadioButton } from './radio-button'
 import { ElRadioGroup } from './radio-group'
-import { ElRow } from './row'
-import { ElSelect } from './select'
+import { TcRow } from './row'
+import { TcSelect } from './select'
 import { ElSlider } from './slider'
 import { ElStep } from './step'
 import { ElSteps } from './steps'
 import { ElSubmenu } from './submenu'
 import { ElSwitch } from './switch'
-import { ElTable } from './table'
+import { TcTable } from './table'
 import { ElTableColumn } from './table-column'
 import { ElTag } from './tag'
 import { ElTabs } from './tabs'
@@ -106,10 +106,10 @@ export const version: string
 export function install (vue: typeof Vue, options: InstallationOptions): void
 
 /** ElementUI component common definition */
-export type Component = ElementUIComponent
+export type Component = UrptUiComponent
 
 /** Component size definition for button, input, etc */
-export type ComponentSize = ElementUIComponentSize
+export type ComponentSize = UrptUiComponentSize
 
 /** Horizontal alignment */
 export type HorizontalAlignment = ElementUIHorizontalAlignment
@@ -129,7 +129,7 @@ export const Notification: ElNotification
 // TS cannot merge imported class with namespace, so declare subclasses instead
 
 /** Alert Component */
-export class Alert extends ElAlert {}
+export class Alert extends TcAlert {}
 
 /** Aside Component */
 export class Aside extends ElAside {}
@@ -147,7 +147,7 @@ export class Breadcrumb extends ElBreadcrumb {}
 export class BreadcrumbItem extends ElBreadcrumbItem {}
 
 /** Button Component */
-export class Button extends ElButton {}
+export class Button extends TcButton {}
 
 /** Button Group Component */
 export class ButtonGroup extends ElButtonGroup {}
@@ -165,7 +165,7 @@ export class Carousel extends ElCarousel {}
 export class CarouselItem extends ElCarouselItem {}
 
 /** Checkbox Component */
-export class Checkbox extends ElCheckbox {}
+export class Checkbox extends TcCheckbox {}
 
 /** Checkbox Button Component */
 export class CheckboxButton extends ElCheckboxButton {}
@@ -174,7 +174,7 @@ export class CheckboxButton extends ElCheckboxButton {}
 export class CheckboxGroup extends ElCheckboxGroup {}
 
 /** Colunm Layout Component */
-export class Col extends ElCol {}
+export class Col extends TcCol {}
 
 /** Collapse Component */
 export class Collapse extends ElCollapse {}
@@ -213,13 +213,13 @@ export class Form extends ElForm {}
 export class FormItem extends ElFormItem {}
 
 /** Header Component */
-export class Header extends ElHeader {}
+export class Header extends TcHeader {}
 
 /** Input Component */
-export class Input extends ElInput {}
+export class Input extends TcInput {}
 
 /** Input Number Component */
-export class InputNumber extends ElInputNumber {}
+export class InputNumber extends TcInputNumber {}
 
 /** Main Component */
 export class Main extends ElMain {}
@@ -252,7 +252,7 @@ export class Progress extends ElProgress {}
 export class Rate extends ElRate {}
 
 /** Radio Component */
-export class Radio extends ElRadio {}
+export class Radio extends TcRadio {}
 
 /** Radio Button Component */
 export class RadioButton extends ElRadioButton {}
@@ -261,10 +261,10 @@ export class RadioButton extends ElRadioButton {}
 export class RadioGroup extends ElRadioGroup {}
 
 /** Row Layout Component */
-export class Row extends ElRow {}
+export class Row extends TcRow {}
 
 /** Dropdown Select Component */
-export class Select extends ElSelect {}
+export class Select extends TcSelect {}
 
 /** Slider Component */
 export class Slider extends ElSlider {}
@@ -282,7 +282,7 @@ export class Submenu extends ElSubmenu {}
 export class Switch extends ElSwitch {}
 
 /** Table Component */
-export class Table extends ElTable {}
+export class Table extends TcTable {}
 
 /** Table Column Component */
 export class TableColumn extends ElTableColumn {}

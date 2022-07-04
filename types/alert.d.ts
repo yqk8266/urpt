@@ -1,10 +1,10 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 export type AlertType = 'success' | 'warning' | 'info' | 'error'
 export type AlertEffect = 'dark' | 'light'
 
 /** Alert Component */
-export declare class ElAlert extends ElementUIComponent {
+export declare class TcAlert extends UrptUiComponent {
   /** Title */
   title: string
 

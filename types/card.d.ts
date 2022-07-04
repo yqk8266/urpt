@@ -1,5 +1,5 @@
 import { VNode, VNodeDirective } from 'vue'
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 export interface CardSlots {
   /** Content of the card */
@@ -12,7 +12,7 @@ export interface CardSlots {
 }
 
 /** Integrate information in a card container */
-export declare class ElCard extends ElementUIComponent {
+export declare class ElCard extends UrptUiComponent {
   /** Title of the card */
   header: string
 

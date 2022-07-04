@@ -1,8 +1,8 @@
-import ElInput from './src/input';
+import TcInput from './src/input';
 
 /* istanbul ignore next */
-ElInput.install = function(Vue) {
-  Vue.component(ElInput.name, ElInput);
+TcInput.install = function(Vue) {
+  Vue.component(TcInput.name, TcInput);
 };
 
-export default ElInput;
+export default TcInput;

@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 import { ElPopover } from './popover'
 
 /** Popconfirm Component */

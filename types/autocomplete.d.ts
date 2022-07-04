@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { UrptUiComponent } from './component'
 
 export type SuggestionPlacement = 'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end'
 
@@ -22,7 +22,7 @@ export interface FetchSuggestions {
 }
 
 /** Autocomplete Component */
-export declare class ElAutocomplete extends ElementUIComponent {
+export declare class ElAutocomplete extends UrptUiComponent {
   /** The placeholder of Autocomplete */
   placeholder: string
 
